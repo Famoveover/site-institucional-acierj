@@ -1,0 +1,50 @@
+# Dependências
+node_modules/
+
+# Arquivos de ambiente / segredos
+.env
+.env.local
+.env.*
+!.env.example
+
+# Builds / artefatos
+.next/
+out/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log
+pnpm-debug.log*
+*.log
+
+# Caches
+.cache/
+.parcel-cache/
+.vite/
+
+# Ferramentas / deploy
+.vercel/
+.serverless/
+.firebase/
+
+# Testes / cobertura
+coverage/
+.nyc_output/
+
+# IDEs / editores
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Processos temporários
+.pids
+*.pid
+*.seed
+
