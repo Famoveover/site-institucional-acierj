@@ -1,0 +1,12 @@
+.logo {
+  font-weight: 700;
+}
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+}

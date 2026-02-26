@@ -1,0 +1,10 @@
+.section {
+  padding: 2rem 0;
+}
+.section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+.section p {
+  margin: 0;
+}

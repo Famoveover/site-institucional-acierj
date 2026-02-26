@@ -1,0 +1,121 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-primary: #0b5cff;
+  --max-width: 1000px;
+  --space: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--space) * 1.25);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  background: #000;
+  color: #fff;
+  z-index: 1000;
+}
+
+.header {
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.hero {
+  padding: calc(var(--space) * 2) 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+.lead {
+  font-size: 1.125rem;
+  color: #374151;
+}
+
+.site-main {
+  padding: var(--space) 0 4rem;
+}
+
+.content {
+  padding: var(--space) 0;
+}
+
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.25rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 480px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+.contact-form button {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
