@@ -7,9 +7,6 @@
   "description": "Site institucional da **Associação dos Cuidadores da Pessoa Idosa, da Saúde Mental e com Deficiência do Estado do Rio de Janeiro (ACIERJ)**.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
     "lint:check": " prettier --check .",
     "lint:fix": "prettier --write ."
   },
