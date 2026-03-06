@@ -31,10 +31,27 @@ O projeto tem como objetivo criar uma plataforma digital clara, acessível e ins
 
 ## 🛠️ Tecnologias Utilizadas
 
+- Next.js (Pages Router)
+- React
 - HTML5 semântico
 - CSS3 (Flexbox / Grid)
-- JavaScript (interatividade básica — etapa futura)
 - Git e GitHub para versionamento
+
+---
+
+## 🚀 Como executar
+
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+2. Execute o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+3. Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
 ---
 
