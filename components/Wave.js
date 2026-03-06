@@ -5,8 +5,8 @@ export default function Wave() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={{
-        display: 'block',
-        marginTop: '-2px',
+        display: "block",
+        marginTop: "-2px",
       }}
       preserveAspectRatio="none"
     >
