@@ -1,8 +1,6 @@
 /* 1️⃣ identidade visual */
 /* variáveis e estilos globais movidos para styles/globals.css */
 
-
-
 /* 2️⃣ layout */
 .container {
   max-width: 1200px;
@@ -28,23 +26,52 @@
 
 /* hero and card/grid updates */
 .hero {
-  position: relative;
-  display: flex;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8f5 100%);
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  justify-content: center;
-  padding: 100px 0;
-  text-align: center;
-  background: var(--color-secondary) center/cover no-repeat;
-  color: var(--color-text-light);
-  /* clean bottom edge for Wave component transition */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
   overflow: hidden;
+  min-height: 500px;
 }
 
-.heroContent {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+.heroText {
+  max-width: 500px;
+}
+
+.heroText h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.heroText p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: var(--color-text);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage img {
   border-radius: 8px;
-  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .grid {
@@ -70,23 +97,6 @@
   padding: 4rem 0;
 }
 
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  text-align: center;
-  background: center/cover no-repeat;
-  color: var(--color-text-light);
-}
-
-.heroContent {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 8px;
-}
-
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -99,7 +109,9 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .projectGrid article:hover {
@@ -130,8 +142,6 @@
 /* 3️⃣ conteúdo */
 /* regras de tipografia global movidas para globals.css */
 
-
-/* 4️⃣ código */
 .ctaButton {
   display: inline-block;
   background-color: var(--color-secondary);
@@ -140,11 +150,32 @@
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 0.2s;
+  text-decoration: none;
 }
 
 .ctaButton:hover,
 .ctaButton:focus {
   background-color: var(--color-support);
+}
+
+.ctaButtonSecondary {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-secondary);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: 4px;
+  font-weight: bold;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  text-decoration: none;
+}
+
+.ctaButtonSecondary:hover,
+.ctaButtonSecondary:focus {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
 }
 
 .footer {
@@ -259,5 +290,21 @@
 
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 80px 0;
+  }
+
+  .heroText {
+    text-align: center;
+    max-width: none;
+  }
+
+  .heroButtons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
