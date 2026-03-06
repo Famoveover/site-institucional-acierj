@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css";
 import Wave from "../components/Wave";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Contato() {
   return (
@@ -45,12 +46,31 @@ export default function Contato() {
 
         <section className={`${styles.section} ${styles.sectionGreen}`}>
           <div className={styles.container}>
-            <h2>Redes Sociais e Participação</h2>
-            <p>Siga-nos e junte-se ao movimento.</p>
-            <p>E-mail: contato@acierj.org.br</p>
-            <p>Telefone: (21) 1234-5678</p>
+            <h2>Contatos institucionais</h2>
+            <p>
+              <strong>Cássia Gouveia</strong>
+              <br />
+              📞 (21) 97614-4915
+            </p>
+            <p>
+              <strong>Janaína Nascimento</strong>
+              <br />
+              📞 (21) 99378-5374
+            </p>
+            <p>
+              <strong>Escritório Pires</strong>
+              <br />
+              📞 (21) 3148-4795
+              <br />
+              📱 (21) 98236-3474
+            </p>
+            <p>
+              <strong>Email:</strong> acierj@gmail.com
+            </p>
           </div>
         </section>
+
+        <Footer />
       </main>
     </>
   );

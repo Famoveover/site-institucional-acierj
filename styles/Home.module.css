@@ -61,6 +61,7 @@
 .heroButtons {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .heroImage {
@@ -179,69 +180,83 @@
 }
 
 .footer {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: var(--color-support);
+  padding: 60px 0 40px;
+  background-color: #1a5f4a;
   color: var(--color-text-light);
 }
 
 .footerContent {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.footerBrand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.footerCol {
   text-align: left;
 }
 
-.footerBrand h3 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.footerBrand p {
-  margin: 8px 0 0;
-  font-size: 14px;
-}
-
-.footerLinks {
-  text-align: left;
-}
-
-.footerLinks h4 {
+.footerCol h4 {
   margin: 0 0 16px;
   font-size: 16px;
+  font-weight: 600;
 }
 
-.footerLinks ul {
+.footerCol ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footerLinks li {
+.footerCol li {
   margin: 8px 0;
 }
 
-.footerLinks a {
+.footerCol a {
   color: var(--color-text-light);
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.2s;
+  text-decoration: none;
 }
 
-.footerLinks a:hover {
-  opacity: 0.8;
+.footerCol a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  color: #4dd0c1;
+}
+
+.footerCol p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerBrand h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footerBrand p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .footerBottom {
   padding-top: 24px;
-  font-size: 14px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footerBottom p {
+  margin: 4px 0;
 }
 
 /* stats grid */
@@ -274,22 +289,22 @@
 /* responsividade */
 @media (max-width: 768px) {
   .footerContent {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-  }
-
-  .footerBrand {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .footerLinks {
-    text-align: center;
   }
 
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 2rem 0 1rem;
   }
 
   .hero {

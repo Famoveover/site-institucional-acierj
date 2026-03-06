@@ -1,12 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Header.module.css";
+import logoImg from "../imagens/acierj.png";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          ACIERJ
+          <Image
+            src={logoImg}
+            alt="Logo ACIERJ - Associação dos Cuidadores"
+            width={50}
+            height={50}
+            priority
+          />
         </Link>
         <nav className={styles.nav}>
           <Link href="/">Home</Link>

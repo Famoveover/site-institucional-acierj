@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Wave from "../components/Wave";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import logoImg from "../imagens/acierj.png";
 
 export default function Sobre() {
@@ -13,17 +14,16 @@ export default function Sobre() {
           <div className={styles.container}>
             <h1>Sobre a ACIERJ</h1>
             <p>
-              A ACIERJ (Associação dos Cuidadores da Pessoa Idosa, da Saúde
-              Mental e com Deficiência do Estado do Rio de Janeiro) é uma
-              organização dedicada à promoção de direitos, inclusão social e
-              apoio a movimentos comunitários. Nossa missão é fortalecer vozes,
-              construir redes e gerar impacto positivo na sociedade.
+              A Associação de Cuidadores da Pessoa Idosa, Saúde Mental e com
+              Deficiência do Estado do Rio de Janeiro (ACIERJ) é um coletivo de
+              trabalhadores do cuidado que há mais de 13 anos atua na defesa da
+              regulamentação da profissão e na inclusão dos cuidadores nas
+              políticas públicas de saúde e assistência social.
             </p>
             <p>
-              Fundada em [ano], a ACIERJ trabalha para defender a dignidade
-              humana, articular com outros movimentos sociais e promover
-              políticas públicas que atendam às necessidades de cuidadores e
-              populações vulneráveis.
+              A ACIERJ luta pelo reconhecimento da importância social do cuidado
+              e pela valorização dos profissionais que atuam com pessoas idosas,
+              pessoas com deficiência e pessoas em situação de vulnerabilidade.
             </p>
             <div
               style={{
@@ -97,6 +97,8 @@ export default function Sobre() {
             </div>
           </div>
         </section>
+
+        <Footer />
       </main>
     </>
   );

@@ -2,13 +2,14 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Wave from "../components/Wave";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 // imagens locais
 import projeto1Img from "../imagens/acierj3.jpg";
 import projeto2Img from "../imagens/acierj4.jpg";
 import projeto3Img from "../imagens/acierj5.jpg";
 import heroImg from "../imagens/acierj2.jpg";
-import logoImg from "../imagens/acierj.png";
+import quemSomosImg from "../imagens/foto da acierj1.jpg";
 
 export default function Home() {
   return (
@@ -20,15 +21,16 @@ export default function Home() {
             <h1 id="hero-title">ACIERJ</h1>
             <p>Associação dos Cuidadores do Estado do Rio de Janeiro</p>
             <p>
-              Defendendo os direitos dos cuidadores e a dignidade das pessoas em
-              situação de cuidado.
+              Trabalhadores do cuidado organizados na luta pela regulamentação
+              da profissão e pela defesa da dignidade das pessoas idosas, com
+              deficiência e em sofrimento mental.
             </p>
             <div className={styles.heroButtons}>
               <a href="/sobre" className={styles.ctaButton}>
                 Conheça a ACIERJ
               </a>
-              <a href="/contato" className={styles.ctaButtonSecondary}>
-                Precisa de orientação?
+              <a href="/cuidadores" className={styles.ctaButtonSecondary}>
+                Associe-se ao movimento
               </a>
             </div>
           </div>
@@ -47,115 +49,67 @@ export default function Home() {
 
         <section className={`${styles.section} ${styles.sectionWhite}`}>
           <div className={styles.container}>
-            <h2>O que é a ACIERJ</h2>
-            <p>
-              A ACIERJ (Associação dos Cuidadores da Pessoa Idosa, da Saúde
-              Mental e com Deficiência do Estado do Rio de Janeiro) é uma
-              organização dedicada à promoção de direitos, inclusão social e
-              apoio a movimentos comunitários. Nossa missão é fortalecer vozes,
-              construir redes e gerar impacto positivo na sociedade.
-            </p>
-            <a href="/sobre" className={styles.ctaButton}>
-              Saiba mais sobre nossa história
-            </a>
+            <div className={styles.contentWithImage}>
+              <div className={styles.contentText}>
+                <h2>Quem somos</h2>
+                <p>
+                  Somos um coletivo de trabalhadores e trabalhadoras do cuidado que
+                  há mais de 13 anos luta pela regulamentação da profissão e pela
+                  inclusão dos cuidadores nas políticas públicas de saúde e
+                  assistência social (SUS e SUAS).
+                </p>
+                <p>
+                  A ACIERJ é um movimento social organizado que une cuidadores
+                  profissionais, familiares e voluntários na defesa dos direitos
+                  da categoria e das pessoas em situação de cuidado.
+                </p>
+                <a href="/sobre" className={styles.ctaButton}>
+                  Saiba mais sobre a associação
+                </a>
+              </div>
+              <div className={styles.contentImage}>
+                <Image
+                  src={quemSomosImg}
+                  alt="Reunião do coletivo ACIERJ - cuidadores organizados em movimento social"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
         <section className={`${styles.section} ${styles.sectionGray}`}>
           <div className={styles.container}>
-            <h2>Para quem é este site</h2>
+            <h2>Nossa luta</h2>
+            <p>
+              A ACIERJ atua na defesa dos direitos dos cuidadores e das
+              populações em situação de cuidado, dialogando com diversos
+              movimentos sociais que lutam por justiça social, dignidade e
+              políticas públicas inclusivas.
+            </p>
             <div className={styles.grid}>
               <div className={styles.card}>
-                <h3>Cuidadores</h3>
-                <p>Informações sobre profissão, direitos e formação.</p>
-                <a href="/cuidadores" className={styles.ctaButton}>
-                  Acesse
-                </a>
+                <div className={styles.cardIcon}>👥</div>
+                <h3>Direitos dos Cuidadores</h3>
+                <p>Regulamentação profissional e reconhecimento social.</p>
               </div>
               <div className={styles.card}>
-                <h3>Pessoa buscando ajuda</h3>
-                <p>Orientação sobre cuidado e encaminhamento.</p>
-                <a href="/ajuda" className={styles.ctaButton}>
-                  Acesse
-                </a>
+                <div className={styles.cardIcon}>🧓</div>
+                <h3>Pessoa Idosa</h3>
+                <p>Defesa dos direitos e qualidade de vida.</p>
               </div>
               <div className={styles.card}>
-                <h3>Instituições e parceiros</h3>
-                <p>Conheça nossa atuação e como colaborar.</p>
-                <a href="/parceiros" className={styles.ctaButton}>
-                  Acesse
-                </a>
+                <div className={styles.cardIcon}>♿</div>
+                <h3>Pessoa com Deficiência</h3>
+                <p>Inclusão e acessibilidade.</p>
+              </div>
+              <div className={styles.card}>
+                <div className={styles.cardIcon}>🧠</div>
+                <h3>Saúde Mental</h3>
+                <p>Luta antimanicomial e defesa da saúde mental.</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        <Wave />
-
-        <section
-          id="projetos"
-          className={`${styles.section} ${styles.sectionGray}`}
-        >
-          <div className={styles.container}>
-            <h2>Projetos e ações</h2>
-            <p>
-              Conheça as iniciativas que estão transformando vidas e
-              fortalecendo comunidades.
-            </p>
-            <div className={styles.projectGrid}>
-              <article>
-                <Image
-                  src={projeto1Img}
-                  alt="Equipe em ação"
-                  width={300}
-                  height={200}
-                  sizes="(max-width:600px) 100vw, 300px"
-                />
-                <h3>Projeto 1</h3>
-                <p>Iniciativa voltada para educação comunitária.</p>
-              </article>
-              <article>
-                <Image
-                  src={projeto2Img}
-                  alt="Atividade cultural"
-                  width={300}
-                  height={200}
-                  sizes="(max-width:600px) 100vw, 300px"
-                />
-                <h3>Projeto 2</h3>
-                <p>Programa de arte e cultura para jovens.</p>
-              </article>
-              <article>
-                <Image
-                  src={projeto3Img}
-                  alt="Evento de saúde"
-                  width={300}
-                  height={200}
-                  sizes="(max-width:600px) 100vw, 300px"
-                />
-                <h3>Projeto 3</h3>
-                <p>Campanhas de saúde preventiva na comunidade.</p>
-              </article>
-            </div>
-            <a href="/projetos" className={styles.ctaButton}>
-              Ver projetos e iniciativas
-            </a>
-          </div>
-        </section>
-
-        <Wave />
-
-        <section className={`${styles.section} ${styles.sectionWhite}`}>
-          <div className={styles.container}>
-            <h2>Nossas causas</h2>
-            <p>A ACIERJ abraça diversas frentes de luta e defesa social:</p>
-            <ul>
-              <li>Direitos dos cuidadores</li>
-              <li>Pessoa idosa</li>
-              <li>Pessoa com deficiência</li>
-              <li>População em situação de rua</li>
-              <li>Luta antimanicomial</li>
-            </ul>
             <a href="/areas" className={styles.ctaButton}>
               Conheça nossas áreas de atuação
             </a>
@@ -164,70 +118,57 @@ export default function Home() {
 
         <Wave />
 
-        <section className={`${styles.section} ${styles.sectionGreen}`}>
+        <section className={`${styles.section} ${styles.sectionWhite}`}>
           <div className={styles.container}>
-            <h2>Quer conhecer mais ou participar da ACIERJ?</h2>
-            <p>Entre em contato conosco ou acompanhe nossas atividades.</p>
-            <a href="/contato" className={styles.ctaButton}>
-              Entrar em contato
+            <h2>Fortalecer os cuidadores é nossa prioridade</h2>
+            <ul style={{ fontSize: "16px", lineHeight: "1.8" }}>
+              <li>Defesa dos direitos da categoria</li>
+              <li>Formação e instrumentalização profissional</li>
+              <li>Articulação com políticas públicas</li>
+              <li>Participação em movimentos sociais</li>
+            </ul>
+            <a href="/cuidadores" className={styles.ctaButton}>
+              Veja como participar
             </a>
           </div>
         </section>
 
-        <footer className={styles.footer}>
+        <Wave />
+
+        <section className={`${styles.section} ${styles.sectionGray}`}>
           <div className={styles.container}>
-            <div className={styles.footerContent}>
-              <div className={styles.footerBrand}>
-                <Image src={logoImg} alt="Logo ACIERJ" width={80} height={80} />
-                <div>
-                  <h3>ACIERJ</h3>
-                  <p>
-                    Associação dos Cuidadores da Pessoa Idosa, da Saúde Mental e
-                    com Deficiência do Estado do Rio de Janeiro
-                  </p>
-                </div>
-              </div>
-              <div className={styles.footerLinks}>
-                <h4>Páginas</h4>
-                <ul>
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>
-                    <a href="/sobre">Sobre a ACIERJ</a>
-                  </li>
-                  <li>
-                    <a href="/areas">Áreas de Atuação</a>
-                  </li>
-                  <li>
-                    <a href="/cuidadores">Para Cuidadores</a>
-                  </li>
-                  <li>
-                    <a href="/ajuda">Buscar Ajuda</a>
-                  </li>
-                  <li>
-                    <a href="/projetos">Projetos e Ações</a>
-                  </li>
-                  <li>
-                    <a href="/parceiros">Parceiros</a>
-                  </li>
-                  <li>
-                    <a href="/noticias">Notícias</a>
-                  </li>
-                  <li>
-                    <a href="/contato">Contato</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className={styles.footerBottom}>
-              <p>
-                © {new Date().getFullYear()} ACIERJ. Todos os direitos
-                reservados.
-              </p>
-            </div>
+            <h2>Por que se associar à ACIERJ</h2>
+            <ul style={{ fontSize: "16px", lineHeight: "1.8" }}>
+              <li>Suporte jurídico</li>
+              <li>Orientação profissional</li>
+              <li>Rede de apoio e parcerias</li>
+              <li>
+                Roda de escuta terapêutica com psicologia e serviço social
+              </li>
+            </ul>
+            <a href="/cuidadores" className={styles.ctaButton}>
+              Saiba como se associar
+            </a>
           </div>
-        </footer>
+        </section>
+
+        <Wave />
+
+        <section className={`${styles.section} ${styles.sectionGreen}`}>
+          <div className={styles.container}>
+            <h2>Junte-se ao movimento</h2>
+            <p>
+              A luta pela valorização do cuidado precisa de organização
+              coletiva. Faça parte da ACIERJ e fortaleça a categoria dos
+              cuidadores no estado do Rio de Janeiro.
+            </p>
+            <a href="/cuidadores" className={styles.ctaButton}>
+              Preencher ficha de inscrição
+            </a>
+          </div>
+        </section>
+
+        <Footer />
       </main>
     </>
   );

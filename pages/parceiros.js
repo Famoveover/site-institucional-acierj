@@ -1,9 +1,12 @@
 import styles from "../styles/Home.module.css";
 import Wave from "../components/Wave";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Parceiros() {
   return (
-    <main className={styles.container}>
+    <>
+      <Header />
       <section className={`${styles.section} ${styles.sectionWhite}`}>
         <div className={styles.container}>
           <h1>Parceiros e Articulação</h1>
@@ -35,6 +38,9 @@ export default function Parceiros() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
+    </>
   );
 }

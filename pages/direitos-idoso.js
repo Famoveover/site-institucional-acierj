@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css";
 import Wave from "../components/Wave";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function DireitosIdoso() {
   return (
@@ -69,6 +70,8 @@ export default function DireitosIdoso() {
             </div>
           </div>
         </section>
+
+        <Footer />
       </main>
     </>
   );
