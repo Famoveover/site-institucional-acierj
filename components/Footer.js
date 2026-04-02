@@ -1,140 +1,152 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Footer.module.css";
 import logoImg from "../imagens/acierj.png";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.footerGrid}>
-          {/* ── Marca ── */}
-          <div className={styles.brand}>
-            <div className={styles.brandTop}>
+    <footer className="bg-brand-600 text-gray-100 pt-16">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Grid principal */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">
+          {/* Marca */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-3">
               <Image
                 src={logoImg}
                 alt="Logo ACIERJ"
-                width={52}
-                height={52}
+                width={48}
+                height={48}
+                className="rounded-lg"
               />
-              <h3 className={styles.brandName}>ACIERJ</h3>
+              <h3 className="text-xl font-extrabold text-white">ACIERJ</h3>
             </div>
-            <p className={styles.brandDesc}>
+            <p className="text-sm text-white/65 leading-relaxed">
               Associação dos Cuidadores da Pessoa Idosa, da Saúde Mental e com
               Deficiência do Estado do Rio de Janeiro. Coletivo na luta pela
               valorização e regulamentação da profissão.
             </p>
-            <div className={styles.socials}>
-              <a
-                href="https://www.instagram.com/acaborj/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label="Instagram da ACIERJ"
-              >
-                📷
-              </a>
-              <a
-                href="https://www.facebook.com/acaborj"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label="Facebook da ACIERJ"
-              >
-                📘
-              </a>
-              <a
-                href="mailto:acierj@gmail.com"
-                className={styles.socialLink}
-                aria-label="Email da ACIERJ"
-              >
-                ✉️
-              </a>
+            <div className="flex gap-2.5 mt-1">
+              {[
+                {
+                  href: "https://www.instagram.com/acaborj/",
+                  label: "Instagram",
+                  icon: "📷",
+                },
+                {
+                  href: "https://www.facebook.com/acaborj",
+                  label: "Facebook",
+                  icon: "📘",
+                },
+                {
+                  href: "mailto:acierj@gmail.com",
+                  label: "Email",
+                  icon: "✉️",
+                },
+              ].map(({ href, label, icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    href.startsWith("http") ? "noopener noreferrer" : undefined
+                  }
+                  aria-label={`${label} da ACIERJ`}
+                  className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-white text-base no-underline hover:bg-brand-400 hover:-translate-y-0.5 transition-all"
+                >
+                  {icon}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* ── Navegação ── */}
-          <nav className={styles.col} aria-label="Links do footer">
-            <h4>Navegação</h4>
-            <ul>
-              <li>
-                <Link href="/">Início</Link>
-              </li>
-              <li>
-                <Link href="/sobre">Sobre a ACIERJ</Link>
-              </li>
-              <li>
-                <Link href="/areas">Áreas de Atuação</Link>
-              </li>
-              <li>
-                <Link href="/cuidadores">Cuidadores</Link>
-              </li>
-              <li>
-                <Link href="/cursos">Cursos</Link>
-              </li>
-              <li>
-                <Link href="/contato">Contato</Link>
-              </li>
+          {/* Navegação */}
+          <nav aria-label="Links do footer">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white/45 mb-5">
+              Navegação
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                ["/", "Início"],
+                ["/sobre", "Sobre a ACIERJ"],
+                ["/areas", "Áreas de Atuação"],
+                ["/cuidadores", "Cuidadores"],
+                ["/cursos", "Cursos"],
+                ["/contato", "Contato"],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-white/80 no-underline hover:text-white hover:pl-1 transition-all"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
-          {/* ── Participe ── */}
-          <div className={styles.col}>
-            <h4>Participe</h4>
-            <ul>
-              <li>
-                <Link href="/cuidadores">Associe-se à ACIERJ</Link>
-              </li>
-              <li>
-                <Link href="/cuidadores">Ficha de inscrição</Link>
-              </li>
-              <li>
-                <Link href="/projetos">Projetos e eventos</Link>
-              </li>
-              <li>
-                <Link href="/noticias">Notícias</Link>
-              </li>
-              <li>
-                <Link href="/direitos-idoso">Direitos da Pessoa Idosa</Link>
-              </li>
+          {/* Participe */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white/45 mb-5">
+              Participe
+            </h4>
+            <ul className="space-y-2.5">
+              {[
+                ["/cuidadores", "Associe-se à ACIERJ"],
+                ["/cuidadores", "Ficha de inscrição"],
+                ["/projetos", "Projetos e eventos"],
+                ["/noticias", "Notícias"],
+                ["/direitos-idoso", "Direitos da Pessoa Idosa"],
+              ].map(([href, label]) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    className="text-sm text-white/80 no-underline hover:text-white hover:pl-1 transition-all"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* ── Contato ── */}
-          <div className={styles.col}>
-            <h4>Contato</h4>
-            <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>✉️</span>
-              <p className={styles.contactText}>
-                <strong>Email</strong>
-                acierj@gmail.com
-              </p>
-            </div>
-            <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>📞</span>
-              <p className={styles.contactText}>
-                <strong>Telefone</strong>
-                (21) 98236-3474
-              </p>
-            </div>
-            <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>📍</span>
-              <p className={styles.contactText}>
-                <strong>Localização</strong>
-                Rio de Janeiro – RJ
-              </p>
+          {/* Contato */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white/45 mb-5">
+              Contato
+            </h4>
+            <div className="space-y-4">
+              {[
+                { icon: "✉️", title: "Email", text: "acierj@gmail.com" },
+                { icon: "📞", title: "Telefone", text: "(21) 98236-3474" },
+                {
+                  icon: "📍",
+                  title: "Localização",
+                  text: "Rio de Janeiro – RJ",
+                },
+              ].map(({ icon, title, text }) => (
+                <div key={title} className="flex items-start gap-2.5">
+                  <span className="text-base mt-0.5 shrink-0">{icon}</span>
+                  <p className="text-sm text-white/80 leading-snug m-0">
+                    <strong className="block text-white font-semibold mb-0.5">
+                      {title}
+                    </strong>
+                    {text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* ── Barra inferior ── */}
-        <div className={styles.bottom}>
-          <p className={styles.copyright}>
+        {/* Barra inferior */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-2 py-6">
+          <p className="text-[13px] text-white/50 m-0">
             © {new Date().getFullYear()} ACIERJ – Associação dos Cuidadores do
             Estado do Rio de Janeiro. Todos os direitos reservados.
           </p>
-          <p className={styles.bottomNote}>
-            Site desenvolvido para fortalecimento da categoria dos cuidadores.
+          <p className="text-xs text-white/35 m-0">
+            Fortalecimento da categoria dos cuidadores.
           </p>
         </div>
       </div>

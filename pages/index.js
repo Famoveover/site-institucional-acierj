@@ -1,263 +1,257 @@
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import FadeIn from "../components/FadeIn";
+import SectionHeader from "../components/SectionHeader";
+import Card from "../components/Card";
 
-import heroImg from "../imagens/capaacierjoficial.png";
 import quemSomosImg from "../imagens/foto da acierj1.jpg";
 import projeto1Img from "../imagens/acierj3.jpg";
 import projeto2Img from "../imagens/acierj4.jpg";
 import projeto3Img from "../imagens/acierj5.jpg";
+
+/* ── Dados reutilizáveis ── */
+const areas = [
+  {
+    icon: "👥",
+    title: "Direitos dos Cuidadores",
+    desc: "Regulamentação profissional e reconhecimento social.",
+  },
+  {
+    icon: "🧓",
+    title: "Pessoa Idosa",
+    desc: "Defesa dos direitos e qualidade de vida.",
+  },
+  {
+    icon: "♿",
+    title: "Pessoa com Deficiência",
+    desc: "Inclusão e acessibilidade.",
+  },
+  {
+    icon: "🧠",
+    title: "Saúde Mental",
+    desc: "Luta antimanicomial e defesa da saúde mental.",
+  },
+];
+
+const beneficios = [
+  {
+    icon: "⚖️",
+    title: "Suporte jurídico",
+    desc: "Orientação legal para questões trabalhistas e direitos da categoria.",
+  },
+  {
+    icon: "📋",
+    title: "Orientação profissional",
+    desc: "Capacitação e direcionamento para o exercício da profissão.",
+  },
+  {
+    icon: "🤝",
+    title: "Rede de apoio",
+    desc: "Parcerias e articulação com políticas públicas e movimentos sociais.",
+  },
+  {
+    icon: "💚",
+    title: "Escuta terapêutica",
+    desc: "Roda de escuta com psicologia e serviço social para os cuidadores.",
+  },
+];
+
+const projetos = [
+  {
+    img: projeto1Img,
+    alt: "Encontro de cuidadores promovido pela ACIERJ",
+    title: "Encontros de cuidadores",
+    desc: "Rodas de conversa e troca de experiências entre cuidadores de todo o estado.",
+  },
+  {
+    img: projeto2Img,
+    alt: "Ação comunitária da ACIERJ",
+    title: "Ações comunitárias",
+    desc: "Atividades em comunidades para orientação e apoio às famílias que cuidam.",
+  },
+  {
+    img: projeto3Img,
+    alt: "Capacitação profissional ACIERJ",
+    title: "Capacitação profissional",
+    desc: "Cursos e formações para instrumentalizar o trabalho dos cuidadores.",
+  },
+];
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        {/* ── Hero ── */}
-        <section className={styles.hero} aria-labelledby="hero-title">
-          <Image
-            src={heroImg}
-            alt="Bandeira da ACIERJ — Cuidar é um ato político. Regulamentar é um ato de justiça social."
-            fill
-            className={styles.heroBg}
-            priority
-          />
-          {/* overlay via CSS ::before no .hero */}
-          <div className={styles.heroInner}>
-            <div className={styles.heroContent}>
-              <span className={styles.heroTag}>ACIERJ</span>
-              <h1 id="hero-title">
-                Cuidar é um
-                <br />
-                <strong>ato político.</strong>
-              </h1>
-              <p className={styles.heroSub}>
-                Regulamentar é um ato de justiça social.
-              </p>
-              <p className={styles.heroDesc}>
-                Formação, apoio e mobilização para profissionais do cuidado na
-                luta pela regulamentação da profissão no Rio de Janeiro.
-              </p>
-              <div className={styles.heroButtons}>
-                <a href="/contato" className={styles.ctaButtonPrimary}>
-                  Solicitar atendimento
-                </a>
-                <a href="/sobre" className={styles.ctaButtonGhost}>
-                  Saiba mais
-                </a>
-              </div>
+        {/* ═══════════════ Hero ═══════════════ */}
+        <Hero />
+
+        {/* ═══════════════ Quem somos ═══════════════ */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <SectionHeader
+              title="Quem somos"
+              subtitle="Conheça a história e a missão do nosso coletivo."
+            />
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <FadeIn direction="left">
+                <div className="space-y-5">
+                  <p className="text-gray-600 leading-relaxed">
+                    Somos um coletivo de trabalhadores e trabalhadoras do
+                    cuidado que há mais de 13 anos luta pela regulamentação da
+                    profissão e pela inclusão dos cuidadores nas políticas
+                    públicas de saúde e assistência social (SUS e SUAS).
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    A ACIERJ é um movimento social organizado que une cuidadores
+                    profissionais, familiares e voluntários na defesa dos
+                    direitos da categoria e das pessoas em situação de cuidado.
+                  </p>
+                  <Link
+                    href="/sobre"
+                    className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
+                  >
+                    Saiba mais sobre a associação
+                  </Link>
+                </div>
+              </FadeIn>
+              <FadeIn direction="right" delay={0.15}>
+                <div className="overflow-hidden rounded-2xl shadow-xl ring-4 ring-brand-400/20">
+                  <Image
+                    src={quemSomosImg}
+                    alt="Reunião do coletivo ACIERJ"
+                    width={480}
+                    height={360}
+                    className="w-full h-auto hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+              </FadeIn>
             </div>
           </div>
         </section>
 
-        {/* ── Quem somos ── */}
-        <section className={`${styles.section} ${styles.sectionWhite}`}>
-          <div className={styles.wrapper}>
-            <div className={styles.sectionHeader}>
-              <h2>Quem somos</h2>
-              <p>Conheça a história e a missão do nosso coletivo.</p>
+        {/* ═══════════════ Nossa atuação ═══════════════ */}
+        <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50">
+          <div className="max-w-6xl mx-auto px-6">
+            <SectionHeader
+              title="Nossa atuação"
+              subtitle="Atuamos na defesa dos direitos dos cuidadores e das populações em situação de cuidado, dialogando com diversos movimentos sociais."
+            />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {areas.map((item, i) => (
+                <Card key={item.title} {...item} delay={i * 0.08} />
+              ))}
             </div>
-            <div className={styles.twoColumns}>
-              <div className={styles.colText}>
-                <p>
-                  Somos um coletivo de trabalhadores e trabalhadoras do cuidado
-                  que há mais de 13 anos luta pela regulamentação da profissão e
-                  pela inclusão dos cuidadores nas políticas públicas de saúde e
-                  assistência social (SUS e SUAS).
-                </p>
-                <p>
-                  A ACIERJ é um movimento social organizado que une cuidadores
-                  profissionais, familiares e voluntários na defesa dos direitos
-                  da categoria e das pessoas em situação de cuidado.
-                </p>
-                <a href="/sobre" className={styles.ctaButton}>
-                  Saiba mais sobre a associação
-                </a>
-              </div>
-              <div className={styles.colImage}>
-                <Image
-                  src={quemSomosImg}
-                  alt="Reunião do coletivo ACIERJ"
-                  width={480}
-                  height={360}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Nossa atuação ── */}
-        <section className={`${styles.section} ${styles.sectionGray}`}>
-          <div className={styles.wrapper}>
-            <div className={styles.sectionHeader}>
-              <h2>Nossa atuação</h2>
-              <p>
-                Atuamos na defesa dos direitos dos cuidadores e das populações
-                em situação de cuidado, dialogando com diversos movimentos
-                sociais.
-              </p>
-            </div>
-            <div className={styles.grid4}>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>👥</span>
-                <h3>Direitos dos Cuidadores</h3>
-                <p>Regulamentação profissional e reconhecimento social.</p>
-              </div>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>🧓</span>
-                <h3>Pessoa Idosa</h3>
-                <p>Defesa dos direitos e qualidade de vida.</p>
-              </div>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>♿</span>
-                <h3>Pessoa com Deficiência</h3>
-                <p>Inclusão e acessibilidade.</p>
-              </div>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>🧠</span>
-                <h3>Saúde Mental</h3>
-                <p>Luta antimanicomial e defesa da saúde mental.</p>
-              </div>
-            </div>
-            <div className={styles.sectionCta}>
-              <a href="/areas" className={styles.ctaButton}>
+            <FadeIn className="text-center mt-10">
+              <Link
+                href="/areas"
+                className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
+              >
                 Conheça nossas áreas de atuação
-              </a>
-            </div>
+              </Link>
+            </FadeIn>
           </div>
         </section>
 
-        {/* ── Benefícios da associação ── */}
-        <section className={`${styles.section} ${styles.sectionWhite}`}>
-          <div className={styles.wrapper}>
-            <div className={styles.sectionHeader}>
-              <h2>Benefícios da associação</h2>
-              <p>
-                Fortalecer os cuidadores é nossa prioridade. Veja o que a ACIERJ
-                oferece aos associados.
-              </p>
+        {/* ═══════════════ Benefícios ═══════════════ */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <SectionHeader
+              title="Benefícios da associação"
+              subtitle="Fortalecer os cuidadores é nossa prioridade. Veja o que a ACIERJ oferece aos associados."
+            />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {beneficios.map((item, i) => (
+                <Card key={item.title} {...item} delay={i * 0.08} />
+              ))}
             </div>
-            <div className={styles.grid4}>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>⚖️</span>
-                <h3>Suporte jurídico</h3>
-                <p>
-                  Orientação legal para questões trabalhistas e direitos da
-                  categoria.
-                </p>
-              </div>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>📋</span>
-                <h3>Orientação profissional</h3>
-                <p>
-                  Capacitação e direcionamento para o exercício da profissão.
-                </p>
-              </div>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>🤝</span>
-                <h3>Rede de apoio</h3>
-                <p>
-                  Parcerias e articulação com políticas públicas e movimentos
-                  sociais.
-                </p>
-              </div>
-              <div className={styles.card}>
-                <span className={styles.cardIcon}>💚</span>
-                <h3>Escuta terapêutica</h3>
-                <p>
-                  Roda de escuta com psicologia e serviço social para os
-                  cuidadores.
-                </p>
-              </div>
-            </div>
-            <div className={styles.sectionCta}>
-              <a href="/cuidadores" className={styles.ctaButton}>
+            <FadeIn className="text-center mt-10">
+              <Link
+                href="/cuidadores"
+                className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
+              >
                 Veja como participar
-              </a>
-            </div>
+              </Link>
+            </FadeIn>
           </div>
         </section>
 
-        {/* ── Projetos e ações ── */}
-        <section className={`${styles.section} ${styles.sectionGray}`}>
-          <div className={styles.wrapper}>
-            <div className={styles.sectionHeader}>
-              <h2>Projetos e ações</h2>
-              <p>
-                Conheça algumas das iniciativas da ACIERJ em prol dos cuidadores
-                e das pessoas em situação de cuidado.
-              </p>
+        {/* ═══════════════ Projetos ═══════════════ */}
+        <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+          <div className="max-w-6xl mx-auto px-6">
+            <SectionHeader
+              title="Projetos e ações"
+              subtitle="Conheça algumas das iniciativas da ACIERJ em prol dos cuidadores e das pessoas em situação de cuidado."
+            />
+            <div className="grid md:grid-cols-3 gap-7">
+              {projetos.map(({ img, alt, title, desc }, i) => (
+                <FadeIn key={title} delay={i * 0.1}>
+                  <motion.article
+                    whileHover={{ y: -8 }}
+                    className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-gray-200 group"
+                  >
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src={img}
+                        alt={alt}
+                        width={400}
+                        height={250}
+                        className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold mb-2 tracking-tight">
+                        {title}
+                      </h3>
+                      <p className="text-sm text-gray-500 leading-relaxed m-0">
+                        {desc}
+                      </p>
+                    </div>
+                  </motion.article>
+                </FadeIn>
+              ))}
             </div>
-            <div className={styles.grid3}>
-              <article className={styles.projectCard}>
-                <Image
-                  src={projeto1Img}
-                  alt="Encontro de cuidadores promovido pela ACIERJ"
-                  width={400}
-                  height={250}
-                />
-                <div className={styles.projectBody}>
-                  <h3>Encontros de cuidadores</h3>
-                  <p>
-                    Rodas de conversa e troca de experiências entre cuidadores
-                    de todo o estado.
-                  </p>
-                </div>
-              </article>
-              <article className={styles.projectCard}>
-                <Image
-                  src={projeto2Img}
-                  alt="Ação comunitária da ACIERJ"
-                  width={400}
-                  height={250}
-                />
-                <div className={styles.projectBody}>
-                  <h3>Ações comunitárias</h3>
-                  <p>
-                    Atividades em comunidades para orientação e apoio às
-                    famílias que cuidam.
-                  </p>
-                </div>
-              </article>
-              <article className={styles.projectCard}>
-                <Image
-                  src={projeto3Img}
-                  alt="Capacitação profissional ACIERJ"
-                  width={400}
-                  height={250}
-                />
-                <div className={styles.projectBody}>
-                  <h3>Capacitação profissional</h3>
-                  <p>
-                    Cursos e formações para instrumentalizar o trabalho dos
-                    cuidadores.
-                  </p>
-                </div>
-              </article>
-            </div>
-            <div className={styles.sectionCta}>
-              <a href="/projetos" className={styles.ctaButton}>
+            <FadeIn className="text-center mt-10">
+              <Link
+                href="/projetos"
+                className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
+              >
                 Ver todos os projetos
-              </a>
-            </div>
+              </Link>
+            </FadeIn>
           </div>
         </section>
 
-        {/* ── Chamada para associação ── */}
-        <section className={`${styles.section} ${styles.sectionGreen}`}>
-          <div className={styles.wrapper}>
-            <div className={styles.ctaSection}>
-              <h2>Junte-se ao movimento</h2>
-              <p>
+        {/* ═══════════════ CTA Final ═══════════════ */}
+        <section className="py-20 md:py-28 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 relative overflow-hidden">
+          <div
+            className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none"
+            aria-hidden="true"
+          />
+          <div className="max-w-6xl mx-auto px-6 relative">
+            <FadeIn className="text-center max-w-xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+                Junte-se ao movimento
+              </h2>
+              <p className="text-lg text-white/85 leading-relaxed mb-8">
                 A luta pela valorização do cuidado precisa de organização
                 coletiva. Faça parte da ACIERJ e fortaleça a categoria dos
                 cuidadores no estado do Rio de Janeiro.
               </p>
-              <a href="/cuidadores" className={styles.ctaButtonLight}>
+              <Link
+                href="/cuidadores"
+                className="inline-block bg-white text-brand-400 px-8 py-4 rounded-lg font-bold text-sm no-underline shadow-lg shadow-black/20 hover:bg-brand-50 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 hover:no-underline"
+              >
                 Preencher ficha de inscrição
-              </a>
-            </div>
+              </Link>
+            </FadeIn>
           </div>
         </section>
 
