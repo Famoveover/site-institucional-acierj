@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import heroImg from "../imagens/aniversario-acierj2.jpg";
+import heroImg from "../imagens/capaacierjboa.png";
 import quemSomosImg from "../imagens/foto da acierj1.jpg";
 import projeto1Img from "../imagens/acierj3.jpg";
 import projeto2Img from "../imagens/acierj4.jpg";
@@ -18,7 +18,7 @@ export default function Home() {
         <section className={styles.hero} aria-labelledby="hero-title">
           <Image
             src={heroImg}
-            alt="Integrantes da ACIERJ celebrando o aniversário do coletivo com o slogan Nada de nós sem nós"
+            alt="Capa institucional da ACIERJ com integrantes do coletivo"
             fill
             className={styles.heroBg}
             priority
