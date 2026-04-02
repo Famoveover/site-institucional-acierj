@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import heroImg from "../imagens/capaacierjboa.png";
+import heroImg from "../imagens/capaacierjoficial.png";
 import quemSomosImg from "../imagens/foto da acierj1.jpg";
 import projeto1Img from "../imagens/acierj3.jpg";
 import projeto2Img from "../imagens/acierj4.jpg";
