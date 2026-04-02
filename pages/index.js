@@ -18,25 +18,35 @@ export default function Home() {
         <section className={styles.hero} aria-labelledby="hero-title">
           <Image
             src={heroImg}
-            alt="Capa institucional da ACIERJ com integrantes do coletivo"
+            alt="Bandeira da ACIERJ — Cuidar é um ato político. Regulamentar é um ato de justiça social."
             fill
             className={styles.heroBg}
             priority
           />
-          <div className={styles.heroOverlay} />
-          <div className={styles.heroContent}>
-            <h1 id="hero-title">Fortalecendo e valorizando cuidadores</h1>
-            <p>
-              Formação, apoio e mobilização para profissionais do cuidado na
-              luta pela regulamentação da profissão no Rio de Janeiro.
-            </p>
-            <div className={styles.heroButtons}>
-              <a href="/sobre" className={styles.ctaButtonLight}>
-                Conheça a ACIERJ
-              </a>
-              <a href="/cuidadores" className={styles.ctaButtonOutlineLight}>
-                Associe-se ao movimento
-              </a>
+          {/* overlay via CSS ::before no .hero */}
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.heroTag}>ACIERJ</span>
+              <h1 id="hero-title">
+                Cuidar é um
+                <br />
+                <strong>ato político.</strong>
+              </h1>
+              <p className={styles.heroSub}>
+                Regulamentar é um ato de justiça social.
+              </p>
+              <p className={styles.heroDesc}>
+                Formação, apoio e mobilização para profissionais do cuidado na
+                luta pela regulamentação da profissão no Rio de Janeiro.
+              </p>
+              <div className={styles.heroButtons}>
+                <a href="/contato" className={styles.ctaButtonPrimary}>
+                  Solicitar atendimento
+                </a>
+                <a href="/sobre" className={styles.ctaButtonGhost}>
+                  Saiba mais
+                </a>
+              </div>
             </div>
           </div>
         </section>
