@@ -34,6 +34,90 @@ const lutas = [
   },
 ];
 
+const principios = [
+  {
+    icon: "⚖️",
+    title: "Regulamentação e valorização",
+    desc: "Regulamentação da profissão e valorização do trabalho dos cuidadores remunerados, garantindo seus direitos e dignidade nos espaços de trabalho.",
+  },
+  {
+    icon: "🌍",
+    title: "Equidade e justiça",
+    desc: "Promover equidade e justiça no tratamento dos cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra característica.",
+  },
+  {
+    icon: "💚",
+    title: "Saúde e bem-estar",
+    desc: "Oferecer orientação e assistência aos cuidadores remunerados para garantir sua saúde e bem-estar no trabalho.",
+  },
+  {
+    icon: "📚",
+    title: "Desenvolvimento profissional",
+    desc: "Promover o desenvolvimento e a capacitação dos cuidadores, garantindo formação de qualidade e uma prestação de serviços de excelência.",
+  },
+  {
+    icon: "🗣️",
+    title: "Participação e representação",
+    desc: "Garantir a participação e representação dos cuidadores nas decisões que afetam seu trabalho e suas condições de vida.",
+  },
+  {
+    icon: "🛡️",
+    title: "Dignidade no trabalho",
+    desc: "Respeitar a dignidade e os direitos dos cuidadores remunerados, garantindo um ambiente de trabalho seguro e saudável.",
+  },
+  {
+    icon: "🔍",
+    title: "Transparência e ética",
+    desc: "Atuar com transparência e responsabilidade em todas as ações e decisões, garantindo gestão ética e eficiente dos recursos.",
+  },
+];
+
+const destaques = [
+  {
+    icon: "🤝",
+    title: "Representante da categoria",
+    desc: "A ACIERJ é a voz coletiva dos cuidadores, representando a categoria junto ao poder público e à sociedade civil.",
+  },
+  {
+    icon: "⚖️",
+    title: "Regulamentação da profissão",
+    desc: "Lutamos pelo reconhecimento legal da profissão de cuidador, com direitos trabalhistas garantidos e condições dignas de trabalho.",
+  },
+  {
+    icon: "🌱",
+    title: "Inclusão e equidade",
+    desc: "Defendemos a inserção dos cuidadores nas políticas públicas de saúde (SUS) e assistência social (SUAS), com equidade e justiça.",
+  },
+  {
+    icon: "💡",
+    title: "Formação como direito",
+    desc: "Reivindicamos qualificação gratuita e contínua como direito dos cuidadores, garantida e viabilizada pelo Estado.",
+  },
+];
+
+const objetivos = [
+  {
+    icon: "🛡️",
+    title: "Defesa e Garantia de Direitos",
+    desc: "Atuar na defesa dos direitos dos cuidadores remunerados, garantindo condições de trabalho justas e dignas, conforme estabelecido na legislação.",
+  },
+  {
+    icon: "📚",
+    title: "Formação e Qualificação Profissional",
+    desc: "Promover e incentivar a capacitação contínua dos cuidadores, para que estejam sempre atualizados e preparados para as demandas do cuidado.",
+  },
+  {
+    icon: "🔗",
+    title: "Articulação e Participação Social",
+    desc: "Articular-se com o poder público, outros setores da sociedade civil e as famílias para o desenvolvimento e implementação de políticas públicas de cuidado.",
+  },
+  {
+    icon: "🌟",
+    title: "Valorização do Trabalho de Cuidado",
+    desc: "Trabalhar para que a atividade de cuidado seja reconhecida socialmente, desconstruindo a ideia de que é um trabalho exclusivamente feminino.",
+  },
+];
+
 const parceiros = [
   {
     icon: "🎓",
@@ -66,7 +150,7 @@ export default function Sobre() {
       />
 
       {/* ═══════════════ Introdução ═══════════════ */}
-      <section className="py-20 md:py-28 bg-white" aria-labelledby="intro-titulo">
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-900" aria-labelledby="intro-titulo">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn direction="left">
@@ -75,37 +159,25 @@ export default function Sobre() {
                   id="intro-titulo"
                   className="text-3xl md:text-4xl font-extrabold tracking-tight"
                 >
-                  A ACIERJ e sua luta
+                  A ACIERJ
                 </h2>
                 <div className="w-10 h-1 bg-brand-400 rounded-full" />
                 <p className="text-gray-600 leading-relaxed">
-                  A Associação de Cuidadores da Pessoa Idosa, Saúde Mental e com
-                  Deficiência do Estado do Rio de Janeiro (ACIERJ) é um coletivo
-                  de trabalhadores do cuidado que há mais de 13 anos atua na
-                  defesa da regulamentação da profissão e na inclusão dos
-                  cuidadores nas políticas públicas de saúde e assistência
-                  social — SUS e SUAS.
+                  A{" "}
+                  <strong>
+                    Associação de Cuidadores da Pessoa Idosa, da Saúde Mental e
+                    Pessoa com Deficiência do Estado do Rio de Janeiro (ACIERJ)
+                  </strong>{" "}
+                  é uma entidade da sociedade civil comprometida com a defesa
+                  dos direitos dos cuidadores remunerados.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Somos um movimento social organizado que une cuidadores
-                  profissionais, familiares e voluntários na luta pelo
-                  reconhecimento da importância social do cuidado e pela
+                  Com atuação militante e ativista há mais de 13 anos, a ACIERJ
+                  une cuidadores profissionais, familiares e voluntários na luta
+                  pelo reconhecimento da importância social do cuidado — e pela
                   valorização das pessoas que dedicam suas vidas a cuidar de
                   idosos, pessoas com deficiência e em sofrimento mental.
                 </p>
-                <ul className="space-y-2.5">
-                  {[
-                    { icon: "🤝", text: "Defesa coletiva dos direitos da categoria" },
-                    { icon: "⚖️", text: "Regulamentação e reconhecimento profissional" },
-                    { icon: "🌱", text: "Inclusão e equidade nas políticas públicas" },
-                    { icon: "💡", text: "Formação e instrumentalização dos cuidadores" },
-                  ].map(({ icon, text }) => (
-                    <li key={text} className="flex items-center gap-3 text-gray-700 text-sm">
-                      <span className="text-lg flex-shrink-0">{icon}</span>
-                      {text}
-                    </li>
-                  ))}
-                </ul>
                 <Link
                   href="/cuidadores"
                   className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
@@ -130,9 +202,149 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* ═══════════════ Missão e Diretrizes ═══════════════ */}
+      <section
+        className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800"
+        aria-labelledby="missao-titulo"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <FadeIn direction="left">
+              <div className="overflow-hidden rounded-2xl shadow-xl ring-4 ring-brand-400/20">
+                <Image
+                  src={acierj7Img}
+                  alt="Membros da ACIERJ em atividade coletiva"
+                  width={700}
+                  height={450}
+                  className="w-full h-auto hover:scale-[1.03] transition-transform duration-500"
+                />
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="right" delay={0.15}>
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <span className="inline-block text-xs font-bold tracking-[3px] uppercase text-brand-400 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-700/30 rounded-full border border-brand-200 dark:border-brand-400/30">
+                    Nossa missão
+                  </span>
+                  <h2
+                    id="missao-titulo"
+                    className="text-2xl md:text-3xl font-extrabold tracking-tight"
+                  >
+                    Regulamentação e qualificação profissional
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed">
+                    A ACIERJ tem como missão institucional dedicar-se, através de
+                    um trabalho militante e ativista, à{" "}
+                    <strong>regulamentação da profissão</strong> de cuidador e à{" "}
+                    <strong>busca por qualificação</strong> — tanto para
+                    profissionais já atuantes quanto para quem deseja ingressar
+                    nesse segmento.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <span className="inline-block text-xs font-bold tracking-[3px] uppercase text-brand-400 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-700/30 rounded-full border border-brand-200 dark:border-brand-400/30">
+                    Nossas diretrizes
+                  </span>
+                  <ul className="space-y-3">
+                    {[
+                      {
+                        icon: "📋",
+                        text: "Direito à qualificação gratuita e garantida pelo Estado.",
+                      },
+                      {
+                        icon: "🔄",
+                        text: "Educação permanente como ferramenta principal para uma qualificação contínua e de qualidade — que empodere os cuidadores como sujeitos de direito.",
+                      },
+                    ].map(({ icon, text }) => (
+                      <li
+                        key={text}
+                        className="flex items-start gap-3 text-gray-700 text-sm leading-relaxed"
+                      >
+                        <span className="text-xl flex-shrink-0 mt-0.5">{icon}</span>
+                        {text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ Destaques institucionais ═══════════════ */}
+      <section
+        className="py-20 md:py-28 bg-white dark:bg-gray-900"
+        aria-labelledby="destaques-titulo"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <SectionHeader
+            title="Destaques institucionais"
+            subtitle="Quatro pilares que resumem a atuação da ACIERJ na defesa dos cuidadores e na construção de um sistema de cuidado mais justo e inclusivo."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {destaques.map((item, i) => (
+              <Card key={item.title} {...item} delay={i * 0.08} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ Nossos objetivos ═══════════════ */}
+      <section
+        className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800"
+        aria-labelledby="objetivos-titulo"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <SectionHeader
+            title="Nossos objetivos"
+            subtitle="As ações da ACIERJ são orientadas por objetivos concretos que traduzem seu compromisso com a categoria e com a sociedade."
+          />
+          <div className="grid sm:grid-cols-2 gap-6">
+            {objetivos.map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.1}>
+                <div className="flex gap-5 bg-white dark:bg-gray-800 p-7 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:border-brand-200 dark:hover:border-brand-400/40 hover:shadow-md transition-all duration-300 h-full">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-50 dark:bg-brand-700/30 flex items-center justify-center text-2xl">
+                    {item.icon}
+                  </div>
+                  <div className="space-y-1.5">
+                    <h3 className="font-extrabold text-gray-900 dark:text-white text-base leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ Princípios ═══════════════ */}
+      <section
+        className="py-20 md:py-28 bg-white dark:bg-gray-900"
+        aria-labelledby="principios-titulo"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <SectionHeader
+            title="Nossos princípios"
+            subtitle="Como entidade da sociedade civil, a ACIERJ orienta suas ações por princípios que garantem dignidade, equidade e transparência na defesa dos cuidadores remunerados."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {principios.map((item, i) => (
+              <Card key={item.title} {...item} delay={i * 0.08} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════ Nossa luta ═══════════════ */}
       <section
-        className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50"
+        className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800"
         aria-labelledby="luta-titulo"
       >
         <div className="max-w-6xl mx-auto px-6">
@@ -150,7 +362,7 @@ export default function Sobre() {
 
       {/* ═══════════════ Formação e capacitação ═══════════════ */}
       <section
-        className="py-20 md:py-28 bg-white"
+        className="py-20 md:py-28 bg-white dark:bg-gray-900"
         aria-labelledby="formacao-titulo"
       >
         <div className="max-w-6xl mx-auto px-6">
@@ -169,7 +381,7 @@ export default function Sobre() {
 
             <FadeIn direction="right" delay={0.15}>
               <div className="space-y-5">
-                <span className="inline-block text-xs font-bold tracking-[3px] uppercase text-brand-400 px-3.5 py-1.5 bg-brand-50 rounded-full border border-brand-200">
+                <span className="inline-block text-xs font-bold tracking-[3px] uppercase text-brand-400 px-3.5 py-1.5 bg-brand-50 dark:bg-brand-700/30 rounded-full border border-brand-200 dark:border-brand-400/30">
                   Formação profissional
                 </span>
                 <h2
@@ -213,7 +425,7 @@ export default function Sobre() {
 
       {/* ═══════════════ Parcerias ═══════════════ */}
       <section
-        className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50"
+        className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"
         aria-labelledby="parceiros-titulo"
       >
         <div className="max-w-6xl mx-auto px-6">
@@ -226,18 +438,18 @@ export default function Sobre() {
               <FadeIn key={sigla} delay={i * 0.1}>
                 <motion.div
                   whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.10)" }}
-                  className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm transition-all duration-300 hover:border-brand-200 text-center"
+                  className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm transition-all duration-300 hover:border-brand-200 dark:hover:border-brand-400/40 text-center"
                 >
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-50 text-3xl mb-4">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-50 dark:bg-brand-700/30 text-3xl mb-4">
                     {icon}
                   </div>
-                  <h3 className="text-xl font-extrabold text-gray-900 mb-1">
+                  <h3 className="text-xl font-extrabold text-gray-900 dark:text-white mb-1">
                     {sigla}
                   </h3>
                   <p className="text-xs font-semibold text-brand-400 uppercase tracking-wide mb-3">
                     {nome}
                   </p>
-                  <p className="text-sm text-gray-500 leading-relaxed m-0">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
                     {desc}
                   </p>
                 </motion.div>

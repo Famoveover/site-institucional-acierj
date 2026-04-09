@@ -90,7 +90,7 @@ export default function Home() {
         <Hero />
 
         {/* ═══════════════ Quem somos ═══════════════ */}
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
           <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Quem somos"
@@ -134,7 +134,7 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Nossa atuação ═══════════════ */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
           <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Nossa atuação"
@@ -157,7 +157,7 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Benefícios ═══════════════ */}
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
           <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Benefícios da associação"
@@ -180,7 +180,7 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Projetos ═══════════════ */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
           <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Projetos e ações"
@@ -191,7 +191,7 @@ export default function Home() {
                 <FadeIn key={title} delay={i * 0.1}>
                   <motion.article
                     whileHover={{ y: -8 }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-gray-200 group"
+                    className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:border-gray-200 dark:hover:border-gray-600 group"
                   >
                     <div className="relative overflow-hidden">
                       <Image
@@ -206,7 +206,7 @@ export default function Home() {
                       <h3 className="text-lg font-bold mb-2 tracking-tight">
                         {title}
                       </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed m-0">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
                         {desc}
                       </p>
                     </div>

@@ -18,8 +18,16 @@
   background: #ffffff;
 }
 
+:global(.dark) .sectionWhite {
+  background: #111827;
+}
+
 .sectionGray {
   background: #f7f8fa;
+}
+
+:global(.dark) .sectionGray {
+  background: #1f2937;
 }
 
 .sectionGreen {
@@ -51,6 +59,10 @@
   font-size: 17px;
   color: #666;
   line-height: 1.6;
+}
+
+:global(.dark) .sectionHeader p {
+  color: #9ca3af;
 }
 
 /* ── CTA centralizado por seção ── */
@@ -228,6 +240,10 @@
   margin-bottom: 20px;
 }
 
+:global(.dark) .colText p {
+  color: #d1d5db;
+}
+
 .colImage {
   overflow: hidden;
   border-radius: 14px;
@@ -320,9 +336,18 @@
   text-align: center;
 }
 
+:global(.dark) .card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+:global(.dark) .card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .cardIcon {
@@ -341,6 +366,10 @@
   color: #666;
   line-height: 1.5;
   margin: 0;
+}
+
+:global(.dark) .card p {
+  color: #9ca3af;
 }
 
 /* ── Card de projeto ── */
@@ -380,6 +409,10 @@
   color: #666;
   line-height: 1.6;
   margin: 0;
+}
+
+:global(.dark) .projectBody p {
+  color: #9ca3af;
 }
 
 /* ── Seção CTA (chamada para associação) ── */

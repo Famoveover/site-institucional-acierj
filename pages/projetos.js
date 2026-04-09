@@ -45,7 +45,7 @@ export default function Projetos() {
       />
 
       {/* ═══════════════ Projetos em destaque ═══════════════ */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Iniciativas em destaque"
@@ -56,7 +56,7 @@ export default function Projetos() {
               <FadeIn key={title} delay={i * 0.1}>
                 <motion.article
                   whileHover={{ y: -8 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-gray-200 group h-full flex flex-col"
+                  className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:border-gray-200 dark:hover:border-gray-600 group h-full flex flex-col"
                 >
                   <div className="relative overflow-hidden">
                     <Image
@@ -72,7 +72,7 @@ export default function Projetos() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <h3 className="text-lg font-bold mb-2 tracking-tight">{title}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed m-0 flex-1">{desc}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0 flex-1">{desc}</p>
                   </div>
                 </motion.article>
               </FadeIn>

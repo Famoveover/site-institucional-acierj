@@ -4,7 +4,7 @@ import logoImg from "../imagens/acierj.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-600 text-gray-100 pt-16">
+    <footer className="bg-brand-600 dark:bg-gray-950 text-gray-100 pt-16">
       <div className="max-w-6xl mx-auto px-6">
         {/* Grid principal */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">

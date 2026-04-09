@@ -62,7 +62,7 @@ export default function Areas() {
       />
 
       {/* ═══════════════ Causas ═══════════════ */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Causas que defendemos"
@@ -77,7 +77,7 @@ export default function Areas() {
       </section>
 
       {/* ═══════════════ Como atuamos ═══════════════ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Como atuamos"

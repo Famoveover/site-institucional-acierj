@@ -13,7 +13,7 @@ export default function SectionHeader({ title, subtitle }) {
         {title}
       </h2>
       <div className="w-12 h-1 bg-brand-400 rounded-full mx-auto mb-5" />
-      <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+      <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
         {subtitle}
       </p>
     </FadeIn>

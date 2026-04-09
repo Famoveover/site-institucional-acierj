@@ -30,8 +30,8 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        "bg-white/95 backdrop-blur-md",
-        scrolled && "shadow-md bg-white",
+        "bg-white/95 backdrop-blur-md dark:bg-gray-900/95",
+        scrolled && "shadow-md bg-white dark:bg-gray-900 dark:shadow-gray-950/40",
       )}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
@@ -61,7 +61,7 @@ export default function Header() {
             "hidden lg:flex items-center gap-1",
             // Mobile overlay
             menuOpen &&
-              "!flex fixed top-16 right-0 w-72 h-[calc(100vh-4rem)] bg-white flex-col items-stretch gap-0 py-4 shadow-xl overflow-y-auto transition-transform duration-300 z-50",
+              "!flex fixed top-16 right-0 w-72 h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 flex-col items-stretch gap-0 py-4 shadow-xl overflow-y-auto transition-transform duration-300 z-50",
           )}
           aria-label="Menu principal"
         >
@@ -71,11 +71,11 @@ export default function Header() {
               href={href}
               onClick={closeMenu}
               className={cn(
-                "text-sm font-medium text-gray-700 no-underline px-3 py-2 rounded-md",
-                "hover:text-brand-400 hover:bg-brand-50 transition-colors",
+                "text-sm font-medium text-gray-700 dark:text-gray-200 no-underline px-3 py-2 rounded-md",
+                "hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-400/10 transition-colors",
                 // Mobile
                 menuOpen &&
-                  "text-base py-3.5 px-6 rounded-none border-b border-gray-100",
+                  "text-base py-3.5 px-6 rounded-none border-b border-gray-100 dark:border-gray-700",
               )}
             >
               {label}
@@ -97,26 +97,26 @@ export default function Header() {
 
         {/* Hamburger */}
         <button
-          className="flex lg:hidden flex-col justify-center gap-[5px] w-9 h-9 p-1.5 rounded-md hover:bg-gray-50 transition-colors"
+          className="flex lg:hidden flex-col justify-center gap-[5px] w-9 h-9 p-1.5 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={menuOpen}
         >
           <span
             className={cn(
-              "block w-full h-[2.5px] bg-gray-700 rounded transition-all origin-center",
+              "block w-full h-[2.5px] bg-gray-700 dark:bg-gray-200 rounded transition-all origin-center",
               menuOpen && "translate-y-[7.5px] rotate-45",
             )}
           />
           <span
             className={cn(
-              "block w-full h-[2.5px] bg-gray-700 rounded transition-all",
+              "block w-full h-[2.5px] bg-gray-700 dark:bg-gray-200 rounded transition-all",
               menuOpen && "opacity-0",
             )}
           />
           <span
             className={cn(
-              "block w-full h-[2.5px] bg-gray-700 rounded transition-all origin-center",
+              "block w-full h-[2.5px] bg-gray-700 dark:bg-gray-200 rounded transition-all origin-center",
               menuOpen && "-translate-y-[7.5px] -rotate-45",
             )}
           />
