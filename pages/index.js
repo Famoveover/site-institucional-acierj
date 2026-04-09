@@ -26,7 +26,16 @@ const areas = [
     desc: "Defesa dos direitos e qualidade de vida.",
   },
   {
-    icon: "♿",
+    icon: (
+      <Image
+        src="/acessibilidade.png"
+        alt=""
+        width={32}
+        height={32}
+        className="w-8 h-8 object-contain"
+        aria-hidden="true"
+      />
+    ),
     title: "Pessoa com Deficiência",
     desc: "Inclusão e acessibilidade.",
   },
@@ -134,8 +143,8 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Nossa atuação ═══════════════ */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="py-14 sm:py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
+          <div className="max-w-6xl mx-auto px-5 sm:px-6">
             <SectionHeader
               title="Nossa atuação"
               subtitle="Atuamos na defesa dos direitos dos cuidadores e das populações em situação de cuidado, dialogando com diversos movimentos sociais."
@@ -157,8 +166,8 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Benefícios ═══════════════ */}
-        <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="py-14 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
+          <div className="max-w-6xl mx-auto px-5 sm:px-6">
             <SectionHeader
               title="Benefícios da associação"
               subtitle="Fortalecer os cuidadores é nossa prioridade. Veja o que a ACIERJ oferece aos associados."
@@ -180,8 +189,8 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Projetos ═══════════════ */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="py-14 sm:py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+          <div className="max-w-6xl mx-auto px-5 sm:px-6">
             <SectionHeader
               title="Projetos e ações"
               subtitle="Conheça algumas das iniciativas da ACIERJ em prol dos cuidadores e das pessoas em situação de cuidado."
@@ -226,7 +235,7 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ CTA Final ═══════════════ */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 relative overflow-hidden">
+        <section className="py-14 sm:py-20 md:py-28 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 relative overflow-hidden">
           <div
             className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none"
             aria-hidden="true"
@@ -235,7 +244,7 @@ export default function Home() {
             className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none"
             aria-hidden="true"
           />
-          <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="max-w-6xl mx-auto px-5 sm:px-6 relative">
             <FadeIn className="text-center max-w-xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
                 Junte-se ao movimento
