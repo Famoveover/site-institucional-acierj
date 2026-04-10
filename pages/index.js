@@ -12,13 +12,14 @@ import quemSomosImg from "../imagens/foto da acierj1.jpg";
 import projeto1Img from "../imagens/acierj3.jpg";
 import projeto2Img from "../imagens/acierj4.jpg";
 import projeto3Img from "../imagens/acierj5.jpg";
+import acessibilidadeImg from "../imagens/acessibilidade.png";
 
 /* ── Dados reutilizáveis ── */
 const areas = [
   {
     icon: "👥",
     title: "Direitos dos Cuidadores",
-    desc: "Regulamentação profissional e reconhecimento social.",
+    desc: "Regulamentação profissional e visibilidade social.",
   },
   {
     icon: "🧓",
@@ -28,7 +29,7 @@ const areas = [
   {
     icon: (
       <Image
-        src="/acessibilidade.png"
+        src={acessibilidadeImg}
         alt=""
         width={32}
         height={32}
@@ -72,21 +73,21 @@ const beneficios = [
 const projetos = [
   {
     img: projeto1Img,
-    alt: "Encontro de cuidadores promovido pela ACIERJ",
-    title: "Encontros de cuidadores",
-    desc: "Rodas de conversa e troca de experiências entre cuidadores de todo o estado.",
+    alt: "Desenvolvimento profissional em saúde mental promovido pela ACIERJ",
+    title: "Desenvolvimento Profissional em Saúde Mental",
+    desc: "Em parceria com a Fiocruz, capacitação de profissionais da área do cuidado em diversos territórios.",
   },
   {
     img: projeto2Img,
     alt: "Ação comunitária da ACIERJ",
     title: "Ações comunitárias",
-    desc: "Atividades em comunidades para orientação e apoio às famílias que cuidam.",
+    desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida.",
   },
   {
     img: projeto3Img,
-    alt: "Capacitação profissional ACIERJ",
-    title: "Capacitação profissional",
-    desc: "Cursos e formações para instrumentalizar o trabalho dos cuidadores.",
+    alt: "Encontro anual de cuidadores ACIERJ",
+    title: "Encontros de cuidadores",
+    desc: "Espaço de troca, acolhimento e mobilização para trabalhadores cuidadores de todo o estado do Rio de Janeiro.",
   },
 ];
 
@@ -103,7 +104,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Quem somos"
-              subtitle="Conheça a história e a missão do nosso coletivo."
+              subtitle="Conheça a história e trajetória da instituição."
             />
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <FadeIn direction="left">
@@ -112,12 +113,12 @@ export default function Home() {
                     Somos um coletivo de trabalhadores e trabalhadoras do
                     cuidado que há mais de 13 anos luta pela regulamentação da
                     profissão e pela inclusão dos cuidadores nas políticas
-                    públicas de saúde e assistência social (SUS e SUAS).
+                    públicas de saúde (SUS) e assistência social (SUAS).
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    A ACIERJ é um movimento social organizado que une cuidadores
-                    profissionais, familiares e voluntários na defesa dos
-                    direitos da categoria e das pessoas em situação de cuidado.
+                    A ACIERJ é um movimento social organizado que atua em prol
+                    dos cuidadores profissionais, na defesa dos direitos da
+                    categoria e das pessoas em situação de cuidado.
                   </p>
                   <Link
                     href="/sobre"
@@ -147,7 +148,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-5 sm:px-6">
             <SectionHeader
               title="Nossa atuação"
-              subtitle="Atuamos na defesa dos direitos dos cuidadores e das populações em situação de cuidado, dialogando com diversos movimentos sociais."
+              subtitle="Atuamos na defesa social e garantia de direitos, focando tanto no bem-estar de quem cuida quanto na inclusão da população assistida."
             />
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {areas.map((item, i) => (

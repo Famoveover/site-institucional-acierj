@@ -27,9 +27,9 @@ const causas = [
     desc: "Luta antimanicomial, Reforma Psiquiátrica e defesa da saúde mental como direito fundamental.",
   },
   {
-    icon: "🏠",
-    title: "Pop. em Situação de Rua",
-    desc: "Apoio, reinserção social e defesa dos direitos de pessoas em situação de vulnerabilidade.",
+    icon: "\uD83C\uDF93",
+    title: "Cuidadores escolares",
+    desc: "Atuação voltada ao suporte e inclusão de estudantes que necessitam de acompanhamento especializado no ambiente escolar.",
   },
 ];
 
@@ -37,7 +37,7 @@ const como = [
   {
     icon: "🗣️",
     title: "Mobilização coletiva",
-    desc: "Organização de atos, rodas de conversa e mobilização política para avançar na regulamentação da profissão.",
+    desc: "Organização de atividades, rodas de conversa, fóruns, encontro de cuidadores como mobilização política para avançarmos na regulamentação da profissão.",
   },
   {
     icon: "🤝",
@@ -46,7 +46,7 @@ const como = [
   },
   {
     icon: "📜",
-    title: "Pressão política",
+    title: "Mobilização Institucional",
     desc: "Atuação junto a legisladores e gestores para incluir os cuidadores nas políticas públicas.",
   },
 ];
@@ -58,7 +58,7 @@ export default function Areas() {
       <PageHero
         crumb="ACIERJ"
         title="Áreas de Atuação"
-        tagline="Atuamos em diversas frentes de luta e defesa social, focando em direitos e inclusão para populações vulneráveis."
+        tagline="Atuamos na defesa social e garantia de direitos, focando tanto no bem-estar de quem cuida quanto na inclusão da população assistida"
       />
 
       {/* ═══════════════ Causas ═══════════════ */}
@@ -66,7 +66,7 @@ export default function Areas() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Causas que defendemos"
-            subtitle="A ACIERJ abraça diversas frentes de luta, articulando movimentos sociais em prol dos direitos dos cuidadores e das populações em situação de cuidado."
+            subtitle="A ACIERJ atua diversas frentes de luta, articulando movimentos sociais em prol dos direitos dos cuidadores e das populações em situação de cuidado."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {causas.map((item, i) => (
@@ -81,7 +81,7 @@ export default function Areas() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Como atuamos"
-            subtitle="Nossa atuação é baseada em mobilização coletiva, diálogo com movimentos sociais e pressão política para a construção de políticas públicas que valorizem o trabalho dos cuidadores."
+            subtitle="Nossa atuação baseia-se na mobilização coletiva e no diálogo com movimentos sociais para construir políticas públicas que valorizem o trabalho dos cuidadores"
           />
           <div className="grid sm:grid-cols-3 gap-6 mb-12">
             {como.map((item, i) => (

@@ -12,7 +12,7 @@ export default function Cuidadores() {
           <div className={styles.container}>
             <h1>Para Cuidadores</h1>
             <p>
-              Informações e apoio para cuidadores: direitos, formação,
+              Informações para trabalhadores cuidadores: direitos, formação,
               orientações e como se envolver com a ACIERJ.
             </p>
           </div>
@@ -86,15 +86,20 @@ export default function Cuidadores() {
               inscrição e realizar o pagamento da anuidade.
             </p>
             <p>
-              <strong>Anuidade: R$ 100,00</strong>
+              <strong>Anuidade: R$ 120,00</strong>
             </p>
             <p>
-              <strong>Pix (CNPJ): 17.028.461/0001-75</strong>
+              <strong>Chave Pix (CNPJ): 17.028.461/0001-75</strong>
             </p>
             <p>
               <strong>Email: acierj@gmail.com</strong>
             </p>
-            <a href="#" className={styles.ctaButton}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfcWDWsj9DXCJL1EDRmyfwgp2lhZhKsSS2L17sVmbOPY3-l3A/viewform?usp=header"
+              className={styles.ctaButton}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Preencher ficha de inscrição
             </a>
           </div>

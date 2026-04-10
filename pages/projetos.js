@@ -13,24 +13,24 @@ import projeto3Img from "../imagens/acierj5.jpg";
 const projetos = [
   {
     img: projeto1Img,
-    alt: "Encontro de cuidadores promovido pela ACIERJ",
-    title: "Encontros de cuidadores",
-    desc: "Rodas de conversa e troca de experiências entre cuidadores de todo o estado. Espaço de acolhimento, formação e mobilização coletiva.",
-    tag: "Mobilização social",
+    alt: "Desenvolvimento profissional em saúde mental promovido pela ACIERJ",
+    title: "Desenvolvimento Profissional em Saúde Mental",
+    desc: "Em 2025, a ACIERJ, em parceria com a Fiocruz, capacitou mais de 100 profissionais da área do cuidado. A formação foi realizada em diversos territórios, na promoção de um cuidado humanizado e ético. Reafirmando  a formação como um direito.",
+    tag: "Formação",
   },
   {
     img: projeto2Img,
     alt: "Ação comunitária da ACIERJ",
     title: "Ações comunitárias",
-    desc: "Atividades em comunidades para orientação e apoio às famílias que cuidam de idosos, pessoas com deficiência e em sofrimento mental.",
+    desc: "Presença ativa em diversos  eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida.",
     tag: "Ação territorial",
   },
   {
     img: projeto3Img,
-    alt: "Capacitação profissional ACIERJ",
-    title: "Capacitação profissional",
-    desc: "Cursos e formações para instrumentalizar o trabalho dos cuidadores, promovendo cuidado humanizado e qualificado.",
-    tag: "Formação",
+    alt: "Encontro anual de cuidadores ACIERJ",
+    title: "Encontros de cuidadores",
+    desc: "Nosso encontro anual é um espaço de troca, acolhimento e mobilização. Reunimos trabalhadores cuidadores e demais profissionais de todo o estado do Rio de Janeiro para compartilhar experiências e fortalecer a formação da categoria.",
+    tag: "Mobilização social",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Projetos() {
       <PageHero
         crumb="ACIERJ"
         title="Projetos e Ações"
-        tagline="Conheça as iniciativas, campanhas, eventos e mobilizações que estão transformando vidas e fortalecendo comunidades."
+        tagline="Conheça as iniciativas, campanhas, eventos e mobilizações promovidas pela ACIERJ."
       />
 
       {/* ═══════════════ Projetos em destaque ═══════════════ */}
@@ -71,8 +71,12 @@ export default function Projetos() {
                     </span>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <h3 className="text-lg font-bold mb-2 tracking-tight">{title}</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0 flex-1">{desc}</p>
+                    <h3 className="text-lg font-bold mb-2 tracking-tight">
+                      {title}
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0 flex-1">
+                      {desc}
+                    </p>
                   </div>
                 </motion.article>
               </FadeIn>
@@ -83,16 +87,22 @@ export default function Projetos() {
 
       {/* ═══════════════ CTA ═══════════════ */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 relative overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none" aria-hidden="true" />
-        <div className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none" aria-hidden="true" />
+        <div
+          className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none"
+          aria-hidden="true"
+        />
         <div className="max-w-6xl mx-auto px-6 relative">
           <FadeIn className="text-center max-w-xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
               Participe das nossas ações
             </h2>
             <p className="text-lg text-white/80 leading-relaxed mb-8">
-              Faça parte do movimento e contribua para fortalecer a categoria dos
-              cuidadores no estado do Rio de Janeiro.
+              Faça parte do movimento e contribua para fortalecer a categoria
+              dos cuidadores no estado do Rio de Janeiro.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

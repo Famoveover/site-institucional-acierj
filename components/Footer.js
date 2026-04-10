@@ -70,7 +70,6 @@ export default function Footer() {
                 ["/sobre", "Sobre a ACIERJ"],
                 ["/areas", "Áreas de Atuação"],
                 ["/cuidadores", "Cuidadores"],
-                ["/cursos", "Cursos"],
                 ["/contato", "Contato"],
               ].map(([href, label]) => (
                 <li key={href}>

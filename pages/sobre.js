@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import PageLayout from "../components/PageLayout";
 import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
@@ -15,12 +14,12 @@ const lutas = [
   {
     icon: "✊🏾",
     title: "Racismo",
-    desc: "A maioria dos cuidadores é negra. Enfrentamos o racismo estrutural que precariza o trabalho e exclui a categoria das políticas públicas.",
+    desc: "Enfrentamos o racismo estrutural que precariza o trabalho e exclui a categoria dos espaços de trabalho.",
   },
   {
     icon: "👩",
     title: "Machismo",
-    desc: "O cuidado é visto como extensão \"natural\" do trabalho feminino. Lutamos pela valorização de um trabalho historicamente invisibilizado.",
+    desc: 'O cuidado é visto como extensão "natural" do trabalho feminino. Lutamos pela valorização de um trabalho historicamente invisibilizado.',
   },
   {
     icon: "🏳️‍🌈",
@@ -43,17 +42,17 @@ const principios = [
   {
     icon: "🌍",
     title: "Equidade e justiça",
-    desc: "Promover equidade e justiça no tratamento dos cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra característica.",
+    desc: "Promover equidade e justiça à categoria dos trabalhadores cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra característica.",
   },
   {
     icon: "💚",
     title: "Saúde e bem-estar",
-    desc: "Oferecer orientação e assistência aos cuidadores remunerados para garantir sua saúde e bem-estar no trabalho.",
+    desc: "Oferecer orientação e informações estratégicas para que cuidadores remunerados protejam sua saúde e garantam o bem-estar no ambiente de trabalho.",
   },
   {
     icon: "📚",
     title: "Desenvolvimento profissional",
-    desc: "Promover o desenvolvimento e a capacitação dos cuidadores, garantindo formação de qualidade e uma prestação de serviços de excelência.",
+    desc: "Promover o desenvolvimento profissional dos cuidadores, garantindo a formação como ferramenta para uma prestação de serviços de excelência.",
   },
   {
     icon: "🗣️",
@@ -76,7 +75,7 @@ const destaques = [
   {
     icon: "🤝",
     title: "Representante da categoria",
-    desc: "A ACIERJ é a voz coletiva dos cuidadores, representando a categoria junto ao poder público e à sociedade civil.",
+    desc: "A ACIERJ é a voz coletiva dos cuidadores, representando a categoria perante ao poder público e à sociedade civil.",
   },
   {
     icon: "⚖️",
@@ -109,33 +108,12 @@ const objetivos = [
   {
     icon: "🔗",
     title: "Articulação e Participação Social",
-    desc: "Articular-se com o poder público, outros setores da sociedade civil e as famílias para o desenvolvimento e implementação de políticas públicas de cuidado.",
+    desc: "Articular-se com o poder público e outros setores da sociedade civil para o desenvolvimento e implementação de políticas públicas de cuidado.",
   },
   {
     icon: "🌟",
     title: "Valorização do Trabalho de Cuidado",
-    desc: "Trabalhar para que a atividade de cuidado seja reconhecida socialmente, desconstruindo a ideia de que é um trabalho exclusivamente feminino.",
-  },
-];
-
-const parceiros = [
-  {
-    icon: "🎓",
-    sigla: "UFF",
-    nome: "Universidade Federal Fluminense",
-    desc: "Parceria acadêmica que contribui com pesquisa, extensão e formação profissional dos cuidadores.",
-  },
-  {
-    icon: "🏫",
-    sigla: "IFRJ",
-    nome: "Instituto Federal do Rio de Janeiro",
-    desc: "Colaboração na oferta de cursos técnicos e na qualificação profissional da categoria dos cuidadores.",
-  },
-  {
-    icon: "🔬",
-    sigla: "Fiocruz",
-    nome: "Fundação Oswaldo Cruz",
-    desc: "Suporte técnico-científico para iniciativas em saúde pública, saúde mental e cuidado humanizado.",
+    desc: "Atuamos pelo reconhecimento social do cuidado, combatendo o estigma de que se trata de uma atividade exclusivamente feminina e reafirmando-a como uma profissão essencial.",
   },
 ];
 
@@ -146,11 +124,14 @@ export default function Sobre() {
       <PageHero
         crumb="ACIERJ"
         title="Quem Somos"
-        tagline="A luta dos cuidadores invisibilizados"
+        tagline="A associação representante da categoria no Estado do Rio de Janeiro"
       />
 
       {/* ═══════════════ Introdução ═══════════════ */}
-      <section className="py-20 md:py-28 bg-white dark:bg-gray-900" aria-labelledby="intro-titulo">
+      <section
+        className="py-20 md:py-28 bg-white dark:bg-gray-900"
+        aria-labelledby="intro-titulo"
+      >
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn direction="left">
@@ -172,11 +153,10 @@ export default function Sobre() {
                   dos direitos dos cuidadores remunerados.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Com atuação militante e ativista há mais de 13 anos, a ACIERJ
-                  une cuidadores profissionais, familiares e voluntários na luta
-                  pelo reconhecimento da importância social do cuidado — e pela
-                  valorização das pessoas que dedicam suas vidas a cuidar de
-                  idosos, pessoas com deficiência e em sofrimento mental.
+                  Com 13 anos de trajetória ativista, a ACIERJ atua em defesa
+                  dos cuidadores profissionais, lutando pelo reconhecimento
+                  social e pela valorização daqueles que cuidam de pessoas
+                  idosas, com deficiência ou em sofrimento psíquico.
                 </p>
                 <Link
                   href="/cuidadores"
@@ -231,13 +211,13 @@ export default function Sobre() {
                     id="missao-titulo"
                     className="text-2xl md:text-3xl font-extrabold tracking-tight"
                   >
-                    Regulamentação e qualificação profissional
+                    Regulamentação e Formação Profissional
                   </h2>
                   <p className="text-gray-600 leading-relaxed">
-                    A ACIERJ tem como missão institucional dedicar-se, através de
-                    um trabalho militante e ativista, à{" "}
-                    <strong>regulamentação da profissão</strong> de cuidador e à{" "}
-                    <strong>busca por qualificação</strong> — tanto para
+                    A ACIERJ tem como objetivo institucional dedicar-se, através
+                    de um trabalho militante e ativista, à{" "}
+                    <strong>regulamentação da profissão</strong> de cuidadores e
+                    à <strong>busca por formação</strong> — tanto para
                     profissionais já atuantes quanto para quem deseja ingressar
                     nesse segmento.
                   </p>
@@ -251,18 +231,20 @@ export default function Sobre() {
                     {[
                       {
                         icon: "📋",
-                        text: "Direito à qualificação gratuita e garantida pelo Estado.",
+                        text: "Direito à formação gratuita e garantida pelo Estado.",
                       },
                       {
                         icon: "🔄",
-                        text: "Educação permanente como ferramenta principal para uma qualificação contínua e de qualidade — que empodere os cuidadores como sujeitos de direito.",
+                        text: "Educação permanente como ferramenta principal para uma formação contínua e de qualidade — que empodere os cuidadores como sujeitos de direito.",
                       },
                     ].map(({ icon, text }) => (
                       <li
                         key={text}
                         className="flex items-start gap-3 text-gray-700 text-sm leading-relaxed"
                       >
-                        <span className="text-xl flex-shrink-0 mt-0.5">{icon}</span>
+                        <span className="text-xl flex-shrink-0 mt-0.5">
+                          {icon}
+                        </span>
                         {text}
                       </li>
                     ))}
@@ -332,7 +314,7 @@ export default function Sobre() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Nossos princípios"
-            subtitle="Como entidade da sociedade civil, a ACIERJ orienta suas ações por princípios que garantem dignidade, equidade e transparência na defesa dos cuidadores remunerados."
+            subtitle="Promover equidade e justiça a categoria dos trabalhadores cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra característica."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {principios.map((item, i) => (
@@ -388,14 +370,13 @@ export default function Sobre() {
                   id="formacao-titulo"
                   className="text-2xl md:text-3xl font-extrabold tracking-tight"
                 >
-                  Curso de desenvolvimento para cuidadores de saúde mental
+                  Desenvolvimento Profissional em Saúde Mental
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  A ACIERJ organizou um curso de desenvolvimento profissional
-                  voltado para cuidadores que atuam com pessoas em sofrimento
-                  mental. O projeto foi construído em parceria com instituições
-                  de ensino e pesquisa, garantindo formação qualificada e
-                  alinhada à luta antimanicomial.
+                  Em 2025, a ACIERJ, em parceria com a Fiocruz, capacitou mais
+                  de 100 profissionais da área do cuidado. A formação foi
+                  realizada em diversos territórios, na promoção de um cuidado
+                  humanizado e ético. Reafirmando a formação como um direito.
                 </p>
                 <ul className="space-y-2">
                   {[
@@ -405,56 +386,23 @@ export default function Sobre() {
                     "Práticas de escuta ativa e acolhimento",
                     "Autocuidado e saúde do cuidador",
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-2.5 text-sm text-gray-700">
+                    <li
+                      key={item}
+                      className="flex items-center gap-2.5 text-sm text-gray-700"
+                    >
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-400 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link
-                  href="/cursos"
+                  href="/projetos"
                   className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
                 >
-                  Conheça nossos cursos
+                  Conheça nossos projetos
                 </Link>
               </div>
             </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════ Parcerias ═══════════════ */}
-      <section
-        className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"
-        aria-labelledby="parceiros-titulo"
-      >
-        <div className="max-w-6xl mx-auto px-6">
-          <SectionHeader
-            title="Parcerias institucionais"
-            subtitle="A ACIERJ constrói pontes com universidades e centros de pesquisa para fortalecer a formação dos cuidadores e qualificar as políticas públicas voltadas à categoria."
-          />
-          <div className="grid sm:grid-cols-3 gap-7">
-            {parceiros.map(({ icon, sigla, nome, desc }, i) => (
-              <FadeIn key={sigla} delay={i * 0.1}>
-                <motion.div
-                  whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.10)" }}
-                  className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm transition-all duration-300 hover:border-brand-200 dark:hover:border-brand-400/40 text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-50 dark:bg-brand-700/30 text-3xl mb-4">
-                    {icon}
-                  </div>
-                  <h3 className="text-xl font-extrabold text-gray-900 dark:text-white mb-1">
-                    {sigla}
-                  </h3>
-                  <p className="text-xs font-semibold text-brand-400 uppercase tracking-wide mb-3">
-                    {nome}
-                  </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
-                    {desc}
-                  </p>
-                </motion.div>
-              </FadeIn>
-            ))}
           </div>
         </div>
       </section>
@@ -464,8 +412,14 @@ export default function Sobre() {
         className="py-20 md:py-28 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 relative overflow-hidden"
         aria-labelledby="compromisso-titulo"
       >
-        <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none" aria-hidden="true" />
-        <div className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none" aria-hidden="true" />
+        <div
+          className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none"
+          aria-hidden="true"
+        />
         <div className="max-w-6xl mx-auto px-6 relative">
           <FadeIn className="text-center max-w-2xl mx-auto">
             <blockquote className="text-2xl md:text-3xl font-extrabold text-white/30 italic mb-4 tracking-tight">
@@ -479,9 +433,9 @@ export default function Sobre() {
             </h2>
             <p className="text-lg text-white/80 leading-relaxed mb-10">
               A ACIERJ luta por um sistema de cuidado justo, humanizado e
-              público. Defendemos a construção coletiva das políticas que
-              afetam nossa categoria — cuidadores, pessoas idosas, com
-              deficiência e em sofrimento mental. A luta continua.
+              público. Defendemos a construção coletiva das políticas que afetam
+              nossa categoria — cuidadores, pessoas idosas, com deficiência e em
+              sofrimento mental. A luta continua.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
@@ -503,4 +457,3 @@ export default function Sobre() {
     </PageLayout>
   );
 }
-

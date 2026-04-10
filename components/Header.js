@@ -9,7 +9,6 @@ const navLinks = [
   { href: "/sobre", label: "Sobre" },
   { href: "/areas", label: "Áreas de Atuação" },
   { href: "/cuidadores", label: "Cuidadores" },
-  { href: "/cursos", label: "Cursos" },
   { href: "/projetos", label: "Projetos" },
   { href: "/contato", label: "Contato" },
 ];
@@ -31,7 +30,8 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
         "bg-white/95 backdrop-blur-md dark:bg-gray-900/95",
-        scrolled && "shadow-md bg-white dark:bg-gray-900 dark:shadow-gray-950/40",
+        scrolled &&
+          "shadow-md bg-white dark:bg-gray-900 dark:shadow-gray-950/40",
       )}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">

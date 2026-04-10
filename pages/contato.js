@@ -48,24 +48,32 @@ export default function Contato() {
           <div className={styles.container}>
             <h2>Contatos institucionais</h2>
             <p>
-              <strong>Cássia Gouveia</strong>
+              <strong>Lília Nascimento — Presidente</strong>
+              <br />
+              📞 (21) 96407-8051
+            </p>
+            <p>
+              <strong>Ana Gilda — Vice-Presidente</strong>
+              <br />
+              📞 (21) 99348-2699
+            </p>
+            <p>
+              <strong>Cássia Gouveia — Diretoria</strong>
               <br />
               📞 (21) 97614-4915
             </p>
             <p>
-              <strong>Janaína Nascimento</strong>
-              <br />
-              📞 (21) 99378-5374
+              <strong>E-mail:</strong> acierj@gmail.com
             </p>
             <p>
-              <strong>Escritório Pires</strong>
-              <br />
-              📞 (21) 3148-4795
-              <br />
-              📱 (21) 98236-3474
-            </p>
-            <p>
-              <strong>Email:</strong> acierj@gmail.com
+              <strong>Instagram:</strong>{" "}
+              <a
+                href="https://instagram.com/acierjcuidadores"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @acierjcuidadores
+              </a>
             </p>
           </div>
         </section>
