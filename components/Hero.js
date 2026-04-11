@@ -180,7 +180,7 @@ export default function Hero() {
               <Image
                 src={heroImg}
                 alt="Bandeira da ACIERJ — Cuidar é um ato político. Regulamentar é um ato de justiça social."
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-cover rounded-xl"
                 priority
               />
               {/* Reflexo interno */}

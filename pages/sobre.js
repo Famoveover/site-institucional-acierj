@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import PageLayout from "../components/PageLayout";
 import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
@@ -9,6 +10,8 @@ import FadeIn from "../components/FadeIn";
 import acierj1Img from "../imagens/foto da acierj1.jpg";
 import acierj6Img from "../imagens/acierj6.jpg";
 import acierj7Img from "../imagens/acierj7.jpg";
+import acierjForumImg from "../imagens/acierj diretoria.jpeg";
+import mobilizacaoImg from "../imagens/quemsomos.jpeg";
 
 const lutas = [
   {
@@ -168,15 +171,19 @@ export default function Sobre() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.15}>
-              <div className="overflow-hidden rounded-2xl shadow-xl ring-4 ring-brand-400/20">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="overflow-hidden rounded-xl shadow-lg ring-4 ring-brand-400/20"
+              >
                 <Image
-                  src={acierj1Img}
-                  alt="Coletivo ACIERJ reunido — cuidadores organizados em movimento social"
+                  src={acierjForumImg}
+                  alt="Reunião institucional da ACIERJ na UERJ — cuidadores mobilizados"
                   width={700}
                   height={450}
-                  className="w-full h-auto hover:scale-[1.03] transition-transform duration-500"
+                  className="w-full h-auto object-cover"
                 />
-              </div>
+              </motion.div>
             </FadeIn>
           </div>
         </div>
@@ -196,7 +203,7 @@ export default function Sobre() {
                   alt="Membros da ACIERJ em atividade coletiva"
                   width={700}
                   height={450}
-                  className="w-full h-auto hover:scale-[1.03] transition-transform duration-500"
+                  className="w-full h-auto object-cover rounded-xl hover:scale-[1.03] transition-transform duration-500"
                 />
               </div>
             </FadeIn>
@@ -342,6 +349,61 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* ═══════════════ Mobilização ═══════════════ */}
+      <section
+        className="relative overflow-hidden"
+        aria-labelledby="mobilizacao-titulo"
+      >
+        {/* Imagem de fundo */}
+        <div className="absolute inset-0">
+          <Image
+            src={mobilizacaoImg}
+            alt=""
+            fill
+            className="object-cover object-center"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-black/65" />
+        </div>
+
+        {/* Conteúdo */}
+        <div className="relative z-10 py-24 md:py-32 max-w-4xl mx-auto px-6 text-center">
+          <FadeIn>
+            <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[3px] uppercase text-accent mb-6 px-4 py-2 bg-accent/10 border border-accent/25 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              Mobilização
+            </span>
+            <h2
+              id="mobilizacao-titulo"
+              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 tracking-tight leading-tight"
+            >
+              Somos cuidadores.
+              <br />
+              <span className="text-accent">Não aceitamos o veto!</span>
+            </h2>
+            <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto mb-10">
+              Em defesa da regulamentação da profissão, a ACIERJ mobiliza
+              cuidadores de todo o estado do Rio de Janeiro. A luta pela
+              visibilidade e reconhecimento profissional é coletiva.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/cuidadores"
+                className="inline-block bg-accent text-brand-800 px-8 py-4 rounded-xl font-bold text-sm no-underline shadow-lg shadow-accent/20 hover:bg-accent-light hover:-translate-y-0.5 transition-all duration-200 hover:no-underline"
+              >
+                Faça parte do movimento
+              </Link>
+              <Link
+                href="/projetos"
+                className="inline-block bg-transparent text-white px-8 py-4 border-2 border-white/40 rounded-xl font-bold text-sm no-underline hover:bg-white/10 hover:border-white/70 hover:-translate-y-0.5 transition-all duration-200 hover:no-underline"
+              >
+                Ver nossas ações
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* ═══════════════ Formação e capacitação ═══════════════ */}
       <section
         className="py-20 md:py-28 bg-white dark:bg-gray-900"
@@ -356,7 +418,7 @@ export default function Sobre() {
                   alt="Atividade de capacitação profissional da ACIERJ"
                   width={700}
                   height={450}
-                  className="w-full h-auto hover:scale-[1.03] transition-transform duration-500"
+                  className="w-full h-auto object-cover rounded-xl hover:scale-[1.03] transition-transform duration-500"
                 />
               </div>
             </FadeIn>

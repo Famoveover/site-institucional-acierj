@@ -9,9 +9,9 @@ import SectionHeader from "../components/SectionHeader";
 import Card from "../components/Card";
 
 import quemSomosImg from "../imagens/foto da acierj1.jpg";
-import projeto1Img from "../imagens/acierj3.jpg";
+import projeto1Img from "../imagens/acierj diretoria.jpeg";
 import projeto2Img from "../imagens/acierj4.jpg";
-import projeto3Img from "../imagens/acierj5.jpg";
+import projeto3Img from "../imagens/aniversario-acierj2.jpg";
 import acessibilidadeImg from "../imagens/acessibilidade.png";
 
 /* ── Dados reutilizáveis ── */
@@ -135,7 +135,7 @@ export default function Home() {
                     alt="Reunião do coletivo ACIERJ"
                     width={480}
                     height={360}
-                    className="w-full h-auto hover:scale-[1.03] transition-transform duration-500"
+                    className="w-full h-auto object-cover rounded-xl hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
               </FadeIn>
@@ -203,13 +203,13 @@ export default function Home() {
                     whileHover={{ y: -8 }}
                     className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:border-gray-200 dark:hover:border-gray-600 group"
                   >
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden rounded-xl">
                       <Image
                         src={img}
                         alt={alt}
                         width={400}
                         height={250}
-                        className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-56 object-cover rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="p-6">

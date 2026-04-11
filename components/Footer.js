@@ -16,7 +16,7 @@ export default function Footer() {
                 alt="Logo ACIERJ"
                 width={48}
                 height={48}
-                className="rounded-lg"
+                className="rounded-xl shadow-sm"
               />
               <h3 className="text-xl font-extrabold text-white">ACIERJ</h3>
             </div>
