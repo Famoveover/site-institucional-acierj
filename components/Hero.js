@@ -23,7 +23,10 @@ export default function Hero() {
       aria-labelledby="hero-title"
     >
       {/* ── Glows decorativos de fundo ── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        aria-hidden="true"
+      >
         <div className="absolute -top-40 -left-40 w-[480px] h-[480px] rounded-full bg-brand-600/50 blur-3xl" />
         <div className="absolute top-1/2 -right-24 w-80 h-80 rounded-full bg-accent/10 blur-3xl" />
         <div className="absolute -bottom-24 left-1/3 w-72 h-72 rounded-full bg-brand-400/20 blur-2xl" />
@@ -31,12 +34,10 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-14 items-center">
-
           {/* ════════════════════════════════
               Coluna esquerda — conteúdo
           ════════════════════════════════ */}
           <div className="flex flex-col items-start max-lg:items-center max-lg:text-center">
-
             {/* Linha institucional discreta */}
             <motion.p
               {...fadeUp(0.05)}
@@ -63,8 +64,7 @@ export default function Hero() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[58px] xl:text-[64px]
                          font-extrabold leading-[1.08] text-white mb-4"
             >
-              Cuidar é um{" "}
-              <span className="text-accent">ato político.</span>
+              Cuidar é um <span className="text-accent">ato político.</span>
             </motion.h1>
 
             {/* Subtítulo */}
@@ -87,9 +87,8 @@ export default function Hero() {
               className="text-base text-white/55 leading-relaxed mb-10
                          max-w-lg max-lg:max-w-md"
             >
-              Formação, apoio e mobilização para profissionais do cuidado
-              na luta pela regulamentação da profissão no Estado do Rio de
-              Janeiro.
+              Formação, apoio e mobilização para profissionais do cuidado na
+              luta pela regulamentação da profissão no Estado do Rio de Janeiro.
             </motion.p>
 
             {/* Botões CTA */}
@@ -118,7 +117,11 @@ export default function Hero() {
                   strokeWidth={2.5}
                   aria-hidden="true"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
 
@@ -147,8 +150,12 @@ export default function Hero() {
             >
               {STATS.map((s) => (
                 <div key={s.label}>
-                  <p className="text-2xl font-extrabold text-accent leading-none">{s.value}</p>
-                  <p className="text-xs text-white/45 mt-1 leading-tight">{s.label}</p>
+                  <p className="text-2xl font-extrabold text-accent leading-none">
+                    {s.value}
+                  </p>
+                  <p className="text-xs text-white/45 mt-1 leading-tight">
+                    {s.label}
+                  </p>
                 </div>
               ))}
             </motion.div>
@@ -189,10 +196,7 @@ export default function Hero() {
                 aria-hidden="true"
               />
             </div>
-
-
           </motion.div>
-
         </div>
       </div>
     </section>

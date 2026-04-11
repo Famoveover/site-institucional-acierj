@@ -27,10 +27,7 @@ export default function OptimizedImage({
 }) {
   return (
     <div
-      className={cn(
-        "overflow-hidden rounded-xl shadow-sm",
-        wrapperClassName,
-      )}
+      className={cn("overflow-hidden rounded-xl shadow-sm", wrapperClassName)}
     >
       <Image
         src={src}

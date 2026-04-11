@@ -6,30 +6,27 @@ import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 import FadeIn from "../components/FadeIn";
 
-import projeto1Img from "../imagens/acierj diretoria.jpeg";
 import projeto2Img from "../imagens/acierj4.jpg";
 import projeto3Img from "../imagens/aniversario-acierj2.jpg";
 
+import cursoImg from "../imagens/curso.jpeg";
+import turma1Img from "../imagens/turma1.jpeg";
+import turma2Img from "../imagens/turma2.jpeg";
+import turma3Img from "../imagens/turma3.jpeg";
+
 const projetos = [
   {
-    img: projeto1Img,
-    alt: "Desenvolvimento profissional em saúde mental promovido pela ACIERJ",
-    title: "Desenvolvimento Profissional em Saúde Mental",
-    desc: "Em 2025, a ACIERJ, em parceria com a Fiocruz, capacitou mais de 100 profissionais da área do cuidado. A formação foi realizada em diversos territórios, na promoção de um cuidado humanizado e ético. Reafirmando  a formação como um direito.",
-    tag: "Formação",
-  },
-  {
     img: projeto2Img,
-    alt: "Ação comunitária da ACIERJ",
-    title: "Ações comunitárias",
-    desc: "Presença ativa em diversos  eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida.",
+    alt: "Participação da ACIERJ em eventos sobre regulamentação profissional",
+    title: "Ações Comunitárias",
+    desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida, com representação em diferentes territórios do estado do Rio de Janeiro.",
     tag: "Ação territorial",
   },
   {
     img: projeto3Img,
-    alt: "Encontro anual de cuidadores ACIERJ",
-    title: "Encontros de cuidadores",
-    desc: "Nosso encontro anual é um espaço de troca, acolhimento e mobilização. Reunimos trabalhadores cuidadores e demais profissionais de todo o estado do Rio de Janeiro para compartilhar experiências e fortalecer a formação da categoria.",
+    alt: "Encontro anual de cuidadores promovido pela ACIERJ",
+    title: "Encontros de Cuidadores",
+    desc: "Nosso encontro anual é um espaço de troca, acolhimento e mobilização. Reunimos trabalhadores cuidadores e profissionais de todo o estado do Rio de Janeiro para compartilhar experiências e fortalecer a categoria.",
     tag: "Mobilização social",
   },
 ];
@@ -51,7 +48,7 @@ export default function Projetos() {
             title="Iniciativas em destaque"
             subtitle="Projetos que concretizam nossa missão de valorizar o cuidado e fortalecer a categoria dos cuidadores no estado do Rio de Janeiro."
           />
-          <div className="grid md:grid-cols-3 gap-7">
+          <div className="grid md:grid-cols-2 gap-7 max-w-3xl mx-auto">
             {projetos.map(({ img, alt, title, desc, tag }, i) => (
               <FadeIn key={title} delay={i * 0.1}>
                 <motion.article
@@ -82,6 +79,80 @@ export default function Projetos() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ Destaque: Desenvolvimento Profissional em Saúde Mental ═══════════════ */}
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn>
+            <div className="mb-3">
+              <span className="px-3 py-1 bg-brand-400/10 text-brand-600 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase">
+                Formação
+              </span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-3 tracking-tight text-gray-900 dark:text-white">
+              Desenvolvimento Profissional em Saúde Mental
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mb-10 leading-relaxed">
+              Em 2025, a ACIERJ, em parceria com a Fiocruz, capacitou mais de
+              100 profissionais da área do cuidado em diversos territórios,
+              promovendo um cuidado humanizado e ético. Reafirmando a formação
+              como um direito.
+            </p>
+          </FadeIn>
+
+          {/* Imagem principal */}
+          <FadeIn>
+            <div className="relative w-full overflow-hidden rounded-xl shadow-lg mb-6">
+              <Image
+                src={cursoImg}
+                alt="Curso de desenvolvimento profissional em saúde mental ACIERJ Fiocruz"
+                width={1200}
+                height={600}
+                className="w-full h-64 md:h-96 object-cover"
+                priority
+              />
+            </div>
+          </FadeIn>
+
+          {/* Galeria de turmas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            {[
+              {
+                src: turma1Img,
+                alt: "Turma 1 do curso de desenvolvimento profissional em saúde mental",
+              },
+              {
+                src: turma2Img,
+                alt: "Turma 2 do curso de desenvolvimento profissional em saúde mental",
+              },
+              {
+                src: turma3Img,
+                alt: "Turma 3 do curso de desenvolvimento profissional em saúde mental",
+              },
+            ].map(({ src, alt }, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="overflow-hidden rounded-lg shadow-sm">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    width={400}
+                    height={280}
+                    className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          {/* Legenda */}
+          <FadeIn>
+            <p className="text-sm text-gray-400 dark:text-gray-500 text-center italic">
+              Turmas formadas no curso de desenvolvimento profissional em saúde
+              mental (ACIERJ + Fiocruz)
+            </p>
+          </FadeIn>
         </div>
       </section>
 

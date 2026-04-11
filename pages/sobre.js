@@ -7,7 +7,7 @@ import SectionHeader from "../components/SectionHeader";
 import Card from "../components/Card";
 import FadeIn from "../components/FadeIn";
 
-import acierj1Img from "../imagens/foto da acierj1.jpg";
+import acierj1Img from "../imagens/quemsomos.jpeg";
 import acierj6Img from "../imagens/acierj6.jpg";
 import acierj7Img from "../imagens/acierj7.jpg";
 import acierjForumImg from "../imagens/acierj diretoria.jpeg";
