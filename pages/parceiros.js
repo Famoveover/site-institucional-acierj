@@ -14,4 +14,3 @@ export async function getServerSideProps() {
     redirect: { destination: "/sobre", permanent: true },
   };
 }
-

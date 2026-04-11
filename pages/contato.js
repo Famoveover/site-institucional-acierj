@@ -93,8 +93,20 @@ export default function Contato() {
 
                 {/* Demais membros */}
                 {[
-                  { initials: "LN", name: "Lília Nascimento", role: "Vice-Presidente", phone: "(21) 96407-8051", tel: "+5521964078051" },
-                  { initials: "CG", name: "Cássia Gouveia", role: "Diretoria", phone: "(21) 97614-4915", tel: "+5521976144915" },
+                  {
+                    initials: "LN",
+                    name: "Lília Nascimento",
+                    role: "Vice-Presidente",
+                    phone: "(21) 96407-8051",
+                    tel: "+5521964078051",
+                  },
+                  {
+                    initials: "CG",
+                    name: "Cássia Gouveia",
+                    role: "Diretoria",
+                    phone: "(21) 97614-4915",
+                    tel: "+5521976144915",
+                  },
                 ].map(({ initials, name, role, phone, tel }) => (
                   <div
                     key={name}
@@ -149,4 +161,3 @@ export default function Contato() {
     </PageLayout>
   );
 }
-

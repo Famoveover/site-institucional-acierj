@@ -43,7 +43,8 @@ const projetos = [
     title: "Ações Comunitárias",
     desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida, com representação em diferentes territórios do estado do Rio de Janeiro.",
     mainImg: forumImg,
-    mainAlt: "Participação da ACIERJ em fórum sobre regulamentação profissional",
+    mainAlt:
+      "Participação da ACIERJ em fórum sobre regulamentação profissional",
     gallery: [],
   },
 ];
@@ -67,64 +68,66 @@ export default function Projetos() {
           />
 
           <div className="flex flex-col gap-20">
-            {projetos.map(({ tag, title, desc, mainImg, mainAlt, gallery }, i) => (
-              <FadeIn key={title} delay={i * 0.1}>
-                <article className="flex flex-col gap-6">
-                  {/* Cabeçalho do projeto */}
-                  <div>
-                    <span className="px-3 py-1 bg-brand-400/10 text-brand-600 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase">
-                      {tag}
-                    </span>
-                    <h3 className="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                      {title}
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
-                      {desc}
-                    </p>
-                  </div>
-
-                  {/* Imagem principal */}
-                  <div className="w-full overflow-hidden rounded-xl shadow-md">
-                    <Image
-                      src={mainImg}
-                      alt={mainAlt}
-                      width={1200}
-                      height={600}
-                      className="w-full h-64 md:h-96 object-cover"
-                      priority={i === 0}
-                    />
-                  </div>
-
-                  {/* Galeria secundária */}
-                  {gallery.length > 0 && (
-                    <div
-                      className={`grid gap-4 ${
-                        gallery.length === 1
-                          ? "grid-cols-1 max-w-lg"
-                          : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-                      }`}
-                    >
-                      {gallery.map(({ src, alt }, j) => (
-                        <motion.div
-                          key={j}
-                          whileHover={{ scale: 1.02 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden rounded-lg shadow-sm"
-                        >
-                          <Image
-                            src={src}
-                            alt={alt}
-                            width={400}
-                            height={280}
-                            className="w-full h-48 md:h-52 object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                        </motion.div>
-                      ))}
+            {projetos.map(
+              ({ tag, title, desc, mainImg, mainAlt, gallery }, i) => (
+                <FadeIn key={title} delay={i * 0.1}>
+                  <article className="flex flex-col gap-6">
+                    {/* Cabeçalho do projeto */}
+                    <div>
+                      <span className="px-3 py-1 bg-brand-400/10 text-brand-600 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase">
+                        {tag}
+                      </span>
+                      <h3 className="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                        {title}
+                      </h3>
+                      <p className="mt-2 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
+                        {desc}
+                      </p>
                     </div>
-                  )}
-                </article>
-              </FadeIn>
-            ))}
+
+                    {/* Imagem principal */}
+                    <div className="w-full overflow-hidden rounded-xl shadow-md">
+                      <Image
+                        src={mainImg}
+                        alt={mainAlt}
+                        width={1200}
+                        height={600}
+                        className="w-full h-64 md:h-96 object-cover"
+                        priority={i === 0}
+                      />
+                    </div>
+
+                    {/* Galeria secundária */}
+                    {gallery.length > 0 && (
+                      <div
+                        className={`grid gap-4 ${
+                          gallery.length === 1
+                            ? "grid-cols-1 max-w-lg"
+                            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                        }`}
+                      >
+                        {gallery.map(({ src, alt }, j) => (
+                          <motion.div
+                            key={j}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden rounded-lg shadow-sm"
+                          >
+                            <Image
+                              src={src}
+                              alt={alt}
+                              width={400}
+                              height={280}
+                              className="w-full h-48 md:h-52 object-cover transition-transform duration-500 hover:scale-105"
+                            />
+                          </motion.div>
+                        ))}
+                      </div>
+                    )}
+                  </article>
+                </FadeIn>
+              ),
+            )}
           </div>
         </div>
       </section>
