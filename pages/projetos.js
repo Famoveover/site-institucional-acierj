@@ -6,9 +6,15 @@ import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 import FadeIn from "../components/FadeIn";
 
-import projeto2Img from "../imagens/acierj4.jpg";
-import projeto3Img from "../imagens/aniversario-acierj2.jpg";
+// Encontros de Cuidadores
+import encontroCuidadorasImg from "../imagens/encontrocuidadoras.jpeg";
+import encontroCuidadoras2Img from "../imagens/encontrocuidadoras2.jpeg";
+import encontroCuidadoras3Img from "../imagens/encontrocuidadoras3.jpeg";
 
+// Ações Comunitárias
+import forumImg from "../imagens/forum.jpeg";
+
+// Formação
 import cursoImg from "../imagens/curso.jpeg";
 import turma1Img from "../imagens/turma1.jpeg";
 import turma2Img from "../imagens/turma2.jpeg";
@@ -16,18 +22,29 @@ import turma3Img from "../imagens/turma3.jpeg";
 
 const projetos = [
   {
-    img: projeto2Img,
-    alt: "Participação da ACIERJ em eventos sobre regulamentação profissional",
-    title: "Ações Comunitárias",
-    desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida, com representação em diferentes territórios do estado do Rio de Janeiro.",
-    tag: "Ação territorial",
-  },
-  {
-    img: projeto3Img,
-    alt: "Encontro anual de cuidadores promovido pela ACIERJ",
+    tag: "Mobilização social",
     title: "Encontros de Cuidadores",
     desc: "Nosso encontro anual é um espaço de troca, acolhimento e mobilização. Reunimos trabalhadores cuidadores e profissionais de todo o estado do Rio de Janeiro para compartilhar experiências e fortalecer a categoria.",
-    tag: "Mobilização social",
+    mainImg: encontroCuidadorasImg,
+    mainAlt: "Encontro anual de cuidadores promovido pela ACIERJ",
+    gallery: [
+      {
+        src: encontroCuidadoras2Img,
+        alt: "Cuidadoras reunidas no encontro anual da ACIERJ",
+      },
+      {
+        src: encontroCuidadoras3Img,
+        alt: "Momento de integração no encontro de cuidadores da ACIERJ",
+      },
+    ],
+  },
+  {
+    tag: "Ação territorial",
+    title: "Ações Comunitárias",
+    desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida, com representação em diferentes territórios do estado do Rio de Janeiro.",
+    mainImg: forumImg,
+    mainAlt: "Participação da ACIERJ em fórum sobre regulamentação profissional",
+    gallery: [],
   },
 ];
 
@@ -48,34 +65,64 @@ export default function Projetos() {
             title="Iniciativas em destaque"
             subtitle="Projetos que concretizam nossa missão de valorizar o cuidado e fortalecer a categoria dos cuidadores no estado do Rio de Janeiro."
           />
-          <div className="grid md:grid-cols-2 gap-7 max-w-3xl mx-auto">
-            {projetos.map(({ img, alt, title, desc, tag }, i) => (
+
+          <div className="flex flex-col gap-20">
+            {projetos.map(({ tag, title, desc, mainImg, mainAlt, gallery }, i) => (
               <FadeIn key={title} delay={i * 0.1}>
-                <motion.article
-                  whileHover={{ y: -8 }}
-                  className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:border-gray-200 dark:hover:border-gray-600 group h-full flex flex-col"
-                >
-                  <div className="relative overflow-hidden rounded-xl">
-                    <Image
-                      src={img}
-                      alt={alt}
-                      width={400}
-                      height={250}
-                      className="w-full h-56 object-cover rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <span className="absolute top-4 left-4 px-3 py-1 bg-brand-400/90 text-white text-xs font-bold rounded-full">
+                <article className="flex flex-col gap-6">
+                  {/* Cabeçalho do projeto */}
+                  <div>
+                    <span className="px-3 py-1 bg-brand-400/10 text-brand-600 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase">
                       {tag}
                     </span>
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="text-lg font-bold mb-2 tracking-tight">
+                    <h3 className="mt-3 text-xl md:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
                       {title}
                     </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0 flex-1">
+                    <p className="mt-2 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl">
                       {desc}
                     </p>
                   </div>
-                </motion.article>
+
+                  {/* Imagem principal */}
+                  <div className="w-full overflow-hidden rounded-xl shadow-md">
+                    <Image
+                      src={mainImg}
+                      alt={mainAlt}
+                      width={1200}
+                      height={600}
+                      className="w-full h-64 md:h-96 object-cover"
+                      priority={i === 0}
+                    />
+                  </div>
+
+                  {/* Galeria secundária */}
+                  {gallery.length > 0 && (
+                    <div
+                      className={`grid gap-4 ${
+                        gallery.length === 1
+                          ? "grid-cols-1 max-w-lg"
+                          : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                      }`}
+                    >
+                      {gallery.map(({ src, alt }, j) => (
+                        <motion.div
+                          key={j}
+                          whileHover={{ scale: 1.02 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden rounded-lg shadow-sm"
+                        >
+                          <Image
+                            src={src}
+                            alt={alt}
+                            width={400}
+                            height={280}
+                            className="w-full h-48 md:h-52 object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+                  )}
+                </article>
               </FadeIn>
             ))}
           </div>

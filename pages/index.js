@@ -9,9 +9,9 @@ import SectionHeader from "../components/SectionHeader";
 import Card from "../components/Card";
 
 import quemSomosImg from "../imagens/acierj diretoria.jpeg";
-import projeto1Img from "../imagens/acierj diretoria.jpeg";
-import projeto2Img from "../imagens/acierj4.jpg";
-import projeto3Img from "../imagens/aniversario-acierj2.jpg";
+import projeto1Img from "../imagens/curso.jpeg";
+import projeto2Img from "../imagens/encontrocuidadoras.jpeg";
+import projeto3Img from "../imagens/forum.jpeg";
 import acessibilidadeImg from "../imagens/acessibilidade.png";
 
 /* ── Dados reutilizáveis ── */
@@ -73,21 +73,21 @@ const beneficios = [
 const projetos = [
   {
     img: projeto1Img,
-    alt: "Desenvolvimento profissional em saúde mental promovido pela ACIERJ",
+    alt: "Curso de desenvolvimento profissional em saúde mental ACIERJ Fiocruz",
     title: "Desenvolvimento Profissional em Saúde Mental",
     desc: "Em parceria com a Fiocruz, capacitação de profissionais da área do cuidado em diversos territórios.",
   },
   {
     img: projeto2Img,
-    alt: "Ação comunitária da ACIERJ",
-    title: "Ações comunitárias",
-    desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida.",
+    alt: "Encontro anual de cuidadores promovido pela ACIERJ",
+    title: "Encontros de cuidadores",
+    desc: "Espaço de troca, acolhimento e mobilização para trabalhadores cuidadores de todo o estado do Rio de Janeiro.",
   },
   {
     img: projeto3Img,
-    alt: "Encontro anual de cuidadores ACIERJ",
-    title: "Encontros de cuidadores",
-    desc: "Espaço de troca, acolhimento e mobilização para trabalhadores cuidadores de todo o estado do Rio de Janeiro.",
+    alt: "Participação da ACIERJ em fórum sobre regulamentação profissional",
+    title: "Ações comunitárias",
+    desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida.",
   },
 ];
 
