@@ -12,6 +12,7 @@ import acierj6Img from "../imagens/acierj6.jpg";
 import acierj7Img from "../imagens/acierj7.jpg";
 import acierjForumImg from "../imagens/acierj diretoria.jpeg";
 import mobilizacaoImg from "../imagens/quemsomos.jpeg";
+import sobre2Img from "../imagens/sobre2.jpeg";
 
 const lutas = [
   {
@@ -199,7 +200,7 @@ export default function Sobre() {
             <FadeIn direction="left">
               <div className="overflow-hidden rounded-2xl shadow-xl ring-4 ring-brand-400/20">
                 <Image
-                  src={acierj7Img}
+                  src={sobre2Img}
                   alt="Membros da ACIERJ em atividade coletiva"
                   width={700}
                   height={450}
