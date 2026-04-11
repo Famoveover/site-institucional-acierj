@@ -1,47 +1,60 @@
-import styles from "../styles/Home.module.css";
-import Wave from "../components/Wave";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import PageLayout from "../components/PageLayout";
+import PageHero from "../components/PageHero";
+import SectionHeader from "../components/SectionHeader";
+import FadeIn from "../components/FadeIn";
+
+const publicacoes = [
+  {
+    icon: "📢",
+    title: "Evento: Mobilização por Direitos",
+    desc: "Relato do evento realizado no mês passado.",
+  },
+  {
+    icon: "✍️",
+    title: "Artigo: Cuidado e Dignidade",
+    desc: "Reflexões sobre o papel dos cuidadores na sociedade.",
+  },
+  {
+    icon: "🏛️",
+    title: "Posicionamento: Políticas Públicas",
+    desc: "Nossa visão sobre recentes mudanças legislativas.",
+  },
+];
 
 export default function Noticias() {
   return (
-    <>
-      <Header />
-      <main className={styles.container}>
-        <section className={`${styles.section} ${styles.sectionWhite}`}>
-          <div className={styles.container}>
-            <h1>Notícias e Blog</h1>
-            <p>
-              Fique por dentro de eventos, posicionamentos, artigos sobre
-              cuidado, direitos sociais e políticas públicas.
-            </p>
+    <PageLayout>
+      <PageHero
+        crumb="ACIERJ"
+        title="Notícias e Blog"
+        tagline="Fique por dentro de eventos, posicionamentos, artigos sobre cuidado, direitos sociais e políticas públicas."
+      />
+
+      {/* ═══════════════ Publicações ═══════════════ */}
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <SectionHeader
+            title="Publicações Recentes"
+            subtitle="Acompanhe nossas últimas publicações e posicionamentos."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {publicacoes.map(({ icon, title, desc }, i) => (
+              <FadeIn key={title} delay={i * 0.08}>
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 h-full">
+                  <span className="text-3xl mb-4 block">{icon}</span>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2 leading-snug">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
-        </section>
-
-        <Wave />
-
-        <section className={`${styles.section} ${styles.sectionGray}`}>
-          <div className={styles.container}>
-            <h2>Publicações Recentes</h2>
-            <div className={styles.grid}>
-              <div className={styles.card}>
-                <h3>Evento: Mobilização por Direitos</h3>
-                <p>Relato do evento realizado no mês passado.</p>
-              </div>
-              <div className={styles.card}>
-                <h3>Artigo: Cuidado e Dignidade</h3>
-                <p>Reflexões sobre o papel dos cuidadores na sociedade.</p>
-              </div>
-              <div className={styles.card}>
-                <h3>Posicionamento: Políticas Públicas</h3>
-                <p>Nossa visão sobre recentes mudanças legislativas.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <Footer />
-      </main>
-    </>
+        </div>
+      </section>
+    </PageLayout>
   );
 }
+

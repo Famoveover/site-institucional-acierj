@@ -144,8 +144,8 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Nossa atuação ═══════════════ */}
-        <section className="py-14 sm:py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
-          <div className="max-w-6xl mx-auto px-5 sm:px-6">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-brand-50/50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
+          <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Nossa atuação"
               subtitle="Atuamos na defesa social e garantia de direitos, focando tanto no bem-estar de quem cuida quanto na inclusão da população assistida."
@@ -167,8 +167,8 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Benefícios ═══════════════ */}
-        <section className="py-14 sm:py-20 md:py-28 bg-white dark:bg-gray-900">
-          <div className="max-w-6xl mx-auto px-5 sm:px-6">
+        <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
+          <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Benefícios da associação"
               subtitle="Fortalecer os cuidadores é nossa prioridade. Veja o que a ACIERJ oferece aos associados."
@@ -190,8 +190,8 @@ export default function Home() {
         </section>
 
         {/* ═══════════════ Projetos ═══════════════ */}
-        <section className="py-14 sm:py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
-          <div className="max-w-6xl mx-auto px-5 sm:px-6">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+          <div className="max-w-6xl mx-auto px-6">
             <SectionHeader
               title="Projetos e ações"
               subtitle="Conheça algumas das iniciativas da ACIERJ em prol dos cuidadores e das pessoas em situação de cuidado."
@@ -245,7 +245,7 @@ export default function Home() {
             className="absolute -bottom-32 -left-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none"
             aria-hidden="true"
           />
-          <div className="max-w-6xl mx-auto px-5 sm:px-6 relative">
+          <div className="max-w-6xl mx-auto px-6 relative">
             <FadeIn className="text-center max-w-xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
                 Junte-se ao movimento

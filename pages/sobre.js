@@ -470,6 +470,51 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* ═══════════════ Parceiros e Redes ═══════════════ */}
+      <section
+        id="parceiros"
+        className="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+        aria-labelledby="parceiros-titulo"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <SectionHeader
+            title="Parceiros e Redes"
+            subtitle="Trabalhamos em rede para ampliar o impacto das nossas ações e fortalecer a causa dos cuidadores."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: "🏢",
+                title: "Instituições Parceiras",
+                desc: "ONGs, universidades e entidades com as quais colaboramos para ampliar nossa atuação — como UFF, IFRJ e Fiocruz.",
+              },
+              {
+                icon: "✊",
+                title: "Coletivos",
+                desc: "Movimentos sociais e coletivos aliados na luta pelos direitos dos cuidadores e das populações assistidas.",
+              },
+              {
+                icon: "🤝",
+                title: "Como Cooperar",
+                desc: "Quer se envolver com a ACIERJ? Entre em contato para conhecer as formas de parceria e colaboração.",
+              },
+            ].map(({ icon, title, desc }, i) => (
+              <FadeIn key={title} delay={i * 0.08}>
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 h-full">
+                  <span className="text-3xl mb-4 block">{icon}</span>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2 leading-snug">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════ CTA Compromisso ═══════════════ */}
       <section
         className="py-20 md:py-28 bg-gradient-to-br from-brand-600 via-brand-500 to-brand-400 relative overflow-hidden"

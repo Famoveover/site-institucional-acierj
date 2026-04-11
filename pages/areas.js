@@ -98,6 +98,58 @@ export default function Areas() {
           </FadeIn>
         </div>
       </section>
+
+      {/* ═══════════════ Direitos da Pessoa Idosa ═══════════════ */}
+      <section
+        id="direitos-idoso"
+        className="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <SectionHeader
+            title="Direitos da Pessoa Idosa"
+            subtitle="Conheça as principais garantias legais e como a ACIERJ defende os direitos das pessoas idosas."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: "📖",
+                title: "Estatuto do Idoso",
+                desc: "Principais direitos garantidos pela lei, assegurando proteção integral, dignidade e qualidade de vida.",
+              },
+              {
+                icon: "🏥",
+                title: "Apoio Social",
+                desc: "Programas e serviços disponíveis para garantir a saúde e o bem-estar das pessoas idosas.",
+              },
+              {
+                icon: "⚖️",
+                title: "Defesa de Direitos",
+                desc: "Como a ACIERJ atua na defesa dos direitos das pessoas idosas, com articulação política e social.",
+              },
+            ].map(({ icon, title, desc }, i) => (
+              <FadeIn key={title} delay={i * 0.08}>
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 h-full">
+                  <span className="text-3xl mb-4 block">{icon}</span>
+                  <h3 className="font-bold text-gray-900 dark:text-white mb-2 leading-snug">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn className="mt-10 text-center">
+            <Link
+              href="/direitos-idoso"
+              className="inline-block bg-brand-400 text-white px-7 py-3.5 rounded-lg font-bold text-sm no-underline shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-200 hover:no-underline"
+            >
+              Ver página completa
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
     </PageLayout>
   );
 }

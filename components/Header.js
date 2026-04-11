@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/areas", label: "Áreas de Atuação" },
   { href: "/cuidadores", label: "Cuidadores" },
   { href: "/projetos", label: "Projetos" },
+  { href: "/noticias", label: "Notícias" },
   { href: "/contato", label: "Contato" },
 ];
 
