@@ -87,8 +87,7 @@ export default function Hero() {
               className="text-base text-white/55 leading-relaxed mb-10
                          max-w-lg max-lg:max-w-md"
             >
-              Formação, apoio e mobilização para profissionais do cuidado na
-              luta pela regulamentação da profissão no Estado do Rio de Janeiro.
+              Mobilização social com profissionais do cuidado , associações e coletivos na luta pela regulamentação da profissão no Estado do Rio de Janeiro.
             </motion.p>
 
             {/* Botões CTA */}

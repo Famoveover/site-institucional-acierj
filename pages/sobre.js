@@ -128,7 +128,7 @@ export default function Sobre() {
       <PageHero
         crumb="ACIERJ"
         title="Quem Somos"
-        tagline="A associação representante da categoria no Estado do Rio de Janeiro"
+        tagline="A Associação representante da categoria dos cuidadores no estado do Rio de Janeiro"
       />
 
       {/* ═══════════════ Introdução ═══════════════ */}
