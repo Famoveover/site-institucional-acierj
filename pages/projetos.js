@@ -10,9 +10,10 @@ import FadeIn from "../components/FadeIn";
 import encontroCuidadorasImg from "../imagens/encontrocuidadoras.jpeg";
 import encontroCuidadoras2Img from "../imagens/encontrocuidadoras2.jpeg";
 import encontroCuidadoras3Img from "../imagens/encontrocuidadoras3.jpeg";
+import encontroCuidadoras4Img from "../imagens/encontrocuidadoras4.jpeg";
 
 // Ações Comunitárias
-import forumImg from "../imagens/forum.jpeg";
+import anagildaImg from "../imagens/anagilda.jpg";
 
 // Formação
 import cursoImg from "../imagens/curso.jpeg";
@@ -36,15 +37,18 @@ const projetos = [
         src: encontroCuidadoras3Img,
         alt: "Momento de integração no encontro de cuidadores da ACIERJ",
       },
+      {
+        src: encontroCuidadoras4Img,
+        alt: "Encontro de Cuidadores do Estado do Rio de Janeiro 2025",
+      },
     ],
   },
   {
     tag: "Ação territorial",
-    title: "Ações Comunitárias",
+    title: "participação em ações nacionais com a pauta do cuidado.",
     desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida, com representação em diferentes territórios do estado do Rio de Janeiro.",
-    mainImg: forumImg,
-    mainAlt:
-      "Participação da ACIERJ em fórum sobre regulamentação profissional",
+    mainImg: anagildaImg,
+    mainAlt: "Ação comunitária da ACIERJ de defesa dos direitos dos cuidadores",
     gallery: [],
   },
 ];

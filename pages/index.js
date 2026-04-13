@@ -11,7 +11,7 @@ import Card from "../components/Card";
 import quemSomosImg from "../imagens/acierj diretoria.jpeg";
 import projeto1Img from "../imagens/curso.jpeg";
 import projeto2Img from "../imagens/encontrocuidadoras.jpeg";
-import projeto3Img from "../imagens/forum.jpeg";
+import projeto3Img from "../imagens/anagilda.jpg";
 import acessibilidadeImg from "../imagens/acessibilidade.png";
 
 /* ── Dados reutilizáveis ── */
@@ -85,8 +85,8 @@ const projetos = [
   },
   {
     img: projeto3Img,
-    alt: "Participação da ACIERJ em fórum sobre regulamentação profissional",
-    title: "Ações comunitárias",
+    alt: "Ação comunitária da ACIERJ de defesa dos direitos dos cuidadores",
+    title: "Participação em ações nacionais com a pauta do cuidado",
     desc: "Presença ativa em eventos estratégicos sobre a regulamentação da profissão e a valorização de quem cuida.",
   },
 ];
