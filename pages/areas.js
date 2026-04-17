@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import PageLayout from "../components/PageLayout";
 import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 import Card from "../components/Card";
 import FadeIn from "../components/FadeIn";
+import acessibilidadeImg from "../imagens/acessibilidade.png";
 
 const causas = [
   {
@@ -17,7 +19,7 @@ const causas = [
     desc: "Defesa dos direitos, qualidade de vida e proteção integral das pessoas idosas e suas famílias.",
   },
   {
-    icon: "♿",
+    icon: <Image src={acessibilidadeImg} alt="Símbolo de acessibilidade" width={40} height={40} />,
     title: "Pessoa com Deficiência",
     desc: "Promoção de inclusão, acessibilidade e autonomia para pessoas com deficiência.",
   },
