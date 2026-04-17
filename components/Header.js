@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/cuidadores", label: "Cuidadores" },
   { href: "/projetos", label: "Projetos" },
   { href: "/noticias", label: "Notícias" },
+  { href: "/loja", label: "Loja" },
   { href: "/contato", label: "Contato" },
 ];
 

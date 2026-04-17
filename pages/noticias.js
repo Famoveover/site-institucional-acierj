@@ -1,23 +1,36 @@
 import PageLayout from "../components/PageLayout";
 import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
-import FadeIn from "../components/FadeIn";
+import NewsCard from "../components/NewsCard";
 
-const publicacoes = [
+const noticias = [
   {
-    icon: "📢",
-    title: "Evento: Mobilização por Direitos",
-    desc: "Relato do evento realizado no mês passado.",
+    title: "Trabalhadoras do cuidado compartilham experiências em colóquio realizado na USP",
+    source: "Jornal da USP",
+    summary:
+      "Evento na USP reuniu trabalhadoras do cuidado para compartilhar vivências, debater condições de trabalho e discutir caminhos para a valorização da categoria.",
+    link: "https://jornal.usp.br/diversidade/trabalhadoras-do-cuidado-compartilham-experiencias-em-coloquio-realizado-na-usp/",
   },
   {
-    icon: "✍️",
-    title: "Artigo: Cuidado e Dignidade",
-    desc: "Reflexões sobre o papel dos cuidadores na sociedade.",
+    title: "Deputados pedem aprovação de estímulo para contratar cuidadores",
+    source: "Câmara dos Deputados",
+    summary:
+      "Parlamentares defendem a aprovação de projeto que cria incentivos para a contratação formal de cuidadores, visando a valorização e regulamentação da profissão.",
+    link: "https://www.camara.leg.br/noticias/754156-DEPUTADOS-PEDEM-APROVACAO-DE-ESTIMULO-PARA-CONTRATAR-CUIDADORES",
   },
   {
-    icon: "🏛️",
-    title: "Posicionamento: Políticas Públicas",
-    desc: "Nossa visão sobre recentes mudanças legislativas.",
+    title: "'Não consigo relaxar nunca': cuidadoras falam de sobrecarga na pandemia",
+    source: "UOL Notícias",
+    summary:
+      "Reportagem revela o esgotamento físico e emocional de cuidadoras durante a pandemia, evidenciando a sobrecarga de trabalho e a falta de suporte adequado.",
+    link: "https://noticias.uol.com.br/saude/ultimas-noticias/redacao/2021/11/22/nao-consigo-relaxar-nunca-cuidadoras-falam-de-sobrecarga-na-pandemia.htm",
+  },
+  {
+    title: "Seminário na UERJ debate pressões sociais, racismo e saúde mental da mulher negra",
+    source: "UERJ",
+    summary:
+      "Seminário realizado na UERJ discutiu as pressões sociais, o racismo estrutural e seus impactos na saúde mental da mulher negra, com entrega do Prêmio Tereza de Benguela.",
+    link: "https://www.uerj.br/noticia/seminario-na-uerj-debate-pressoes-sociais-racismo-e-saude-mental-da-mulher-negra-com-entrega-do-premio-tereza-de-benguela/",
   },
 ];
 
@@ -30,26 +43,16 @@ export default function Noticias() {
         tagline="Fique por dentro de eventos, posicionamentos, artigos sobre cuidado, direitos sociais e políticas públicas."
       />
 
-      {/* ═══════════════ Publicações ═══════════════ */}
+      {/* ═══════════════ Notícias ═══════════════ */}
       <section className="py-20 md:py-28 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
-            title="Publicações Recentes"
-            subtitle="Acompanhe nossas últimas publicações e posicionamentos."
+            title="Últimas Notícias"
+            subtitle="Acompanhe as principais matérias sobre cuidadores, direitos e políticas públicas."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {publicacoes.map(({ icon, title, desc }, i) => (
-              <FadeIn key={title} delay={i * 0.08}>
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 h-full">
-                  <span className="text-3xl mb-4 block">{icon}</span>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2 leading-snug">
-                    {title}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                    {desc}
-                  </p>
-                </div>
-              </FadeIn>
+          <div className="grid md:grid-cols-2 gap-6">
+            {noticias.map((noticia, i) => (
+              <NewsCard key={noticia.title} {...noticia} delay={i * 0.08} />
             ))}
           </div>
         </div>

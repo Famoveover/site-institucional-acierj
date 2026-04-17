@@ -10,6 +10,7 @@ import FadeIn from "../components/FadeIn";
 import acierj1Img from "../imagens/quemsomos.jpeg";
 import acierj6Img from "../imagens/acierj6.jpg";
 import acierj7Img from "../imagens/acierj7.jpg";
+import acessibilidadeImg from "../imagens/acessibilidade.png";
 import acierjForumImg from "../imagens/acierj diretoria.jpeg";
 import mobilizacaoImg from "../imagens/quemsomos.jpeg";
 import sobre2Img from "../imagens/sobre2.jpeg";
@@ -31,7 +32,14 @@ const lutas = [
     desc: "Muitos cuidadores LGBTQIA+ sofrem discriminação. A ACIERJ defende um ambiente de trabalho livre de qualquer forma de preconceito.",
   },
   {
-    icon: "♿",
+    icon: (
+      <Image
+        src={acessibilidadeImg}
+        alt="Símbolo de acessibilidade"
+        width={40}
+        height={40}
+      />
+    ),
     title: "Capacitismo",
     desc: "As pessoas em situação de cuidado têm o direito à autonomia e à dignidade. Combatemos o capacitismo em todas as suas formas.",
   },
