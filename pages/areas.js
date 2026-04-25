@@ -6,6 +6,9 @@ import SectionHeader from "../components/SectionHeader";
 import Card from "../components/Card";
 import FadeIn from "../components/FadeIn";
 import acessibilidadeImg from "../imagens/acessibilidade.png";
+import reuniaoIntegralidadeImg from "../imagens/popidosademadureira.jpeg";
+import reuniaoCapImg from "../imagens/2reuniaodearticulacao.jpeg";
+import podidosoImg from "../imagens/paticipacaopodidoso.png";
 
 const causas = [
   {
@@ -74,21 +77,21 @@ const legislacaoPessoaIdosa = [
 const atuacaoPessoaIdosa = [
   {
     id: "reuniao-integralidade",
-    imagem: "/imagens/popidosademadureira.jpeg",
+    imagem: reuniaoIntegralidadeImg,
     alt: "Vice-Presidente na Reunião de Integralidade",
     legenda:
       "Participação da Vice-Presidente e responsável pelo departamento da Pessoa Idosa na Reunião de Integralidade, espaço de diálogo e articulação interprofissional voltado ao fortalecimento do cuidado no território com a população idosa de Madureira e demais coberturas do equipamento.",
   },
   {
     id: "reuniao-cap",
-    imagem: "/imagens/2reuniaodearticulacao.jpeg",
+    imagem: reuniaoCapImg,
     alt: "Reunião de articulação com a equipe da CAP 3.3",
     legenda:
       "Reunião de articulação com a equipe da CAP 3.3 na promoção de cuidado, sensibilização e acesso à população idosa assistida do território.",
   },
   {
     id: "podidoso",
-    imagem: "/imagens/paticipacaopodidoso.png",
+    imagem: podidosoImg,
     alt: "Participação no Podidoso",
     legenda:
       "Participação no Podidoso: conversa e debate sobre atribuições, direitos e deveres dos cuidadores da pessoa idosa.",
@@ -190,9 +193,11 @@ export default function Areas() {
                 <article className="group rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 flex flex-col h-full">
                   <div className="relative aspect-[4/3] bg-gradient-to-br from-brand-400/10 to-brand-400/20 dark:from-brand-400/5 dark:to-brand-400/15 overflow-hidden">
                     {imagem ? (
-                      <img
+                      <Image
                         src={imagem}
                         alt={alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
