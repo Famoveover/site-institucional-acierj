@@ -74,21 +74,21 @@ const legislacaoPessoaIdosa = [
 const atuacaoPessoaIdosa = [
   {
     id: "reuniao-integralidade",
-    imagem: null, // TODO: inserir caminho da imagem, ex: "/imagens/reuniao-integralidade.jpg"
+    imagem: "/imagens/popidosademadureira.jpeg",
     alt: "Vice-Presidente na Reunião de Integralidade",
     legenda:
       "Participação da Vice-Presidente e responsável pelo departamento da Pessoa Idosa na Reunião de Integralidade, espaço de diálogo e articulação interprofissional voltado ao fortalecimento do cuidado no território com a população idosa de Madureira e demais coberturas do equipamento.",
   },
   {
     id: "reuniao-cap",
-    imagem: null, // TODO: inserir caminho da imagem, ex: "/imagens/reuniao-cap.jpg"
+    imagem: "/imagens/2reuniaodearticulacao.jpeg",
     alt: "Reunião de articulação com a equipe da CAP 3.3",
     legenda:
       "Reunião de articulação com a equipe da CAP 3.3 na promoção de cuidado, sensibilização e acesso à população idosa assistida do território.",
   },
   {
     id: "podidoso",
-    imagem: null, // TODO: inserir caminho da imagem, ex: "/imagens/podidoso.jpg"
+    imagem: "/imagens/paticipacaopodidoso.png",
     alt: "Participação no Podidoso",
     legenda:
       "Participação no Podidoso: conversa e debate sobre atribuições, direitos e deveres dos cuidadores da pessoa idosa.",
