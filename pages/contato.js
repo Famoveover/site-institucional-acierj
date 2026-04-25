@@ -4,16 +4,79 @@ import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 import FadeIn from "../components/FadeIn";
 
-const WA_MSG = encodeURIComponent(
-  "Olá, gostaria de entrar em contato com a ACIERJ."
-);
-
 function waLink(number, name) {
   const msg = encodeURIComponent(
     `Olá ${name}, gostaria de entrar em contato com a ACIERJ.`
   );
   return `https://wa.me/${number}?text=${msg}`;
 }
+
+const contatosPorFuncao = [
+  {
+    area: "Presidência",
+    contatos: [
+      {
+        initials: "AG",
+        name: "Ana Gilda",
+        role: "Presidenta",
+        phone: "(21) 99348-2699",
+        tel: "+5521993482699",
+        wa: "5521993482699",
+        destaque: true,
+      },
+      {
+        initials: "CG",
+        name: "Cássia Gouveia",
+        role: "Vice-Presidenta",
+        phone: "(21) 97614-4915",
+        tel: "+5521976144915",
+        wa: "5521976144915",
+      },
+    ],
+  },
+  {
+    area: "Tesouraria",
+    contatos: [
+      {
+        initials: "TS",
+        name: "Tainá Santos",
+        role: "1ª Tesoureira",
+        phone: "(21) 96964-1139",
+        tel: "+5521969641139",
+        wa: "5521969641139",
+      },
+      {
+        initials: "AZ",
+        name: "Ariel Zerbinato",
+        role: "2ª Tesoureira",
+        phone: "(21) 97867-9468",
+        tel: "+5521978679468",
+        wa: "5521978679468",
+      },
+    ],
+  },
+  {
+    area: "Secretaria",
+    contatos: [
+      {
+        initials: "LN",
+        name: "Lília Nascimento",
+        role: "1ª Secretaria",
+        phone: "(21) 96407-8051",
+        tel: "+5521964078051",
+        wa: "5521964078051",
+      },
+      {
+        initials: "RG",
+        name: "Rômulo Gabriel",
+        role: "2º Secretário",
+        phone: "(21) 96975-8402",
+        tel: "+5521969758402",
+        wa: "5521969758402",
+      },
+    ],
+  },
+];
 
 function WhatsAppIcon({ className = "w-4 h-4" }) {
   return (
@@ -85,6 +148,7 @@ export default function Contato() {
                     name="nome"
                     type="text"
                     required
+                    disabled={status === "loading"}
                     value={form.nome}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-400"
@@ -102,6 +166,7 @@ export default function Contato() {
                     name="email"
                     type="email"
                     required
+                    disabled={status === "loading"}
                     value={form.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-400"
@@ -119,6 +184,7 @@ export default function Contato() {
                     name="mensagem"
                     rows={5}
                     required
+                    disabled={status === "loading"}
                     value={form.mensagem}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none"
@@ -127,34 +193,48 @@ export default function Contato() {
 
                 {/* Feedback de status */}
                 {status === "success" && (
-                  <div className="px-4 py-3 rounded-lg bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 text-green-700 dark:text-green-300 text-sm font-semibold">
+                  <div
+                    role="status"
+                    aria-live="polite"
+                    className="px-4 py-3 rounded-lg bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 text-green-700 dark:text-green-300 text-sm font-semibold"
+                  >
                     ✅ Mensagem enviada! Responderemos em breve.
                   </div>
                 )}
                 {status === "error" && (
-                  <div className="px-4 py-3 rounded-lg bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 text-red-700 dark:text-red-300 text-sm font-semibold">
+                  <div
+                    role="alert"
+                    aria-live="assertive"
+                    className="px-4 py-3 rounded-lg bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 text-red-700 dark:text-red-300 text-sm font-semibold"
+                  >
                     ❌ {errorMsg}
                   </div>
                 )}
 
                 <div className="flex flex-wrap gap-3">
-                  <button
-                    type="submit"
-                    disabled={status === "loading"}
-                    className="inline-block bg-brand-400 text-white px-8 py-4 rounded-lg font-bold text-sm shadow-md shadow-brand-400/30 hover:bg-accent hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-                  >
-                    {status === "loading" ? "Enviando…" : "Enviar por e-mail"}
-                  </button>
                   <a
                     href={waLink("5521993482699", "Ana Gilda")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-sm shadow-md shadow-black/10 hover:bg-[#1ebe5d] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 no-underline hover:no-underline"
+                    className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-sm shadow-md shadow-black/10 hover:bg-[#1ebe5d] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 no-underline hover:no-underline"
                   >
                     <WhatsAppIcon className="w-5 h-5" />
-                    Falar no WhatsApp
+                    Atendimento imediato via WhatsApp
                   </a>
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="inline-flex items-center justify-center gap-2 border border-brand-300 text-brand-600 dark:text-brand-300 px-8 py-4 rounded-lg font-bold text-sm bg-white dark:bg-gray-800 hover:bg-brand-50 dark:hover:bg-brand-900/20 hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" && (
+                      <span className="w-4 h-4 border-2 border-brand-300 border-t-transparent rounded-full animate-spin" aria-hidden="true" />
+                    )}
+                    {status === "loading" ? "Enviando formulário..." : "Enviar formulário por e-mail"}
+                  </button>
                 </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Para retorno mais rápido, prefira o WhatsApp.
+                </p>
               </form>
             </FadeIn>
 
@@ -162,98 +242,78 @@ export default function Contato() {
             <FadeIn direction="right" delay={0.15}>
               <SectionHeader
                 title="Contatos institucionais"
-                subtitle="Fale diretamente com nossa equipe."
+                subtitle="Escolha a área e fale com a pessoa responsável."
                 align="left"
               />
-              <div className="flex flex-col gap-4 mb-6">
-                {/* Presidenta — destaque */}
-                <div className="bg-brand-50 dark:bg-brand-900/30 rounded-xl p-5 border border-brand-200 dark:border-brand-700 shadow-sm">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="w-10 h-10 flex items-center justify-center rounded-full bg-brand-400 text-white font-bold text-sm flex-shrink-0">
-                      AG
-                    </span>
-                    <div>
-                      <p className="font-extrabold text-gray-900 dark:text-white leading-tight">
-                        Ana Gilda
-                      </p>
-                      <span className="inline-block px-2 py-0.5 bg-brand-400 text-white text-xs font-bold rounded-full mt-0.5">
-                        Presidenta
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <a
-                      href="tel:+5521993482699"
-                      className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:text-brand-500 hover:border-brand-300 transition-colors font-medium"
-                    >
-                      📞 (21) 99348-2699
-                    </a>
-                    <a
-                      href={waLink("5521993482699", "Ana Gilda")}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-sm text-[#1a9b4e] dark:text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
-                    >
-                      <WhatsAppIcon />
-                      WhatsApp
-                    </a>
-                  </div>
-                </div>
 
-                {/* Demais membros */}
-                {[
-                  {
-                    initials: "CG",
-                    name: "Cássia Gouveia",
-                    role: "Vice-Presidenta",
-                    phone: "(21) 97614-4915",
-                    tel: "+5521976144915",
-                    wa: "5521976144915",
-                  },
-                  {
-                    initials: "LN",
-                    name: "Lília Nascimento",
-                    role: "1ª Secretaria",
-                    phone: "(21) 96407-8051",
-                    tel: "+5521964078051",
-                    wa: "5521964078051",
-                  },
-                ].map(({ initials, name, role, phone, tel, wa }) => (
-                  <div
-                    key={name}
-                    className="bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm"
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 font-bold text-sm flex-shrink-0">
-                        {initials}
-                      </span>
-                      <div>
-                        <p className="font-bold text-gray-900 dark:text-white leading-tight">
-                          {name}
-                        </p>
-                        <p className="text-xs text-brand-500 dark:text-brand-300 font-semibold">
-                          {role}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
+              <div className="space-y-6 mb-6">
+                {contatosPorFuncao.map(({ area, contatos }) => (
+                  <section key={area} className="space-y-3">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <h3 className="text-sm font-extrabold uppercase tracking-wide text-gray-700 dark:text-gray-200">
+                        {area}
+                      </h3>
                       <a
-                        href={`tel:${tel}`}
-                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-sm text-gray-700 dark:text-gray-300 hover:text-brand-500 hover:border-brand-300 transition-colors font-medium"
-                      >
-                        📞 {phone}
-                      </a>
-                      <a
-                        href={waLink(wa, name)}
+                        href={waLink(contatos[0].wa, contatos[0].name)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-sm text-[#1a9b4e] dark:text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-300 hover:text-accent transition-colors"
                       >
-                        <WhatsAppIcon />
-                        WhatsApp
+                        <WhatsAppIcon className="w-3.5 h-3.5" />
+                        {`Falar com a ${area}`}
                       </a>
                     </div>
-                  </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {contatos.map(({ initials, name, role, phone, tel, wa, destaque }) => (
+                        <div
+                          key={name}
+                          className={
+                            destaque
+                              ? "bg-brand-50 dark:bg-brand-900/30 rounded-xl p-5 border border-brand-200 dark:border-brand-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                              : "bg-white dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-gray-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                          }
+                        >
+                          <div className="flex items-center gap-3 mb-4">
+                            <span
+                              className={
+                                destaque
+                                  ? "w-10 h-10 flex items-center justify-center rounded-full bg-brand-400 text-white font-bold text-sm flex-shrink-0"
+                                  : "w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 font-bold text-sm flex-shrink-0"
+                              }
+                            >
+                              {initials}
+                            </span>
+                            <div>
+                              <p className="font-bold text-gray-900 dark:text-white leading-tight">
+                                {name}
+                              </p>
+                              <p className="text-xs text-brand-500 dark:text-brand-300 font-semibold">
+                                {role}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            <a
+                              href={`tel:${tel}`}
+                              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-sm text-gray-700 dark:text-gray-300 hover:text-brand-500 hover:border-brand-300 transition-colors font-medium"
+                            >
+                              📞 {phone}
+                            </a>
+                            <a
+                              href={waLink(wa, name)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-sm text-[#1a9b4e] dark:text-[#25D366] hover:bg-[#25D366]/20 transition-colors font-medium"
+                            >
+                              <WhatsAppIcon />
+                              {`Falar com a ${area}`}
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
                 ))}
               </div>
 
