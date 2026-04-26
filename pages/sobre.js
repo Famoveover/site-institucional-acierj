@@ -158,8 +158,8 @@ export default function Sobre() {
                 <p className="text-gray-600 leading-relaxed">
                   A{" "}
                   <strong>
-                    Associação de Cuidadores da Pessoa Idosa, da Saúde Mental e
-                    Pessoa com Deficiência do Estado do Rio de Janeiro (ACIERJ)
+                    Associação dos cuidadores da Pessoa idosa, saúde mental e
+                    com deficiência do estado do Rio de Janeiro (ACIERJ)
                   </strong>{" "}
                   é uma entidade da sociedade civil comprometida com a defesa
                   dos direitos dos cuidadores remunerados.
@@ -330,7 +330,7 @@ export default function Sobre() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Nossos princípios"
-            subtitle="Promover equidade e justiça a categoria dos trabalhadores cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra característica."
+            subtitle="Promover equidade e justiça a categoria dos trabalhadores cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra diversidade."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {principios.map((item, i) => (
