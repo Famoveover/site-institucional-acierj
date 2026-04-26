@@ -22,7 +22,14 @@ const causas = [
     desc: "Defesa dos direitos, qualidade de vida e proteção integral das pessoas idosas e suas famílias.",
   },
   {
-    icon: <Image src={acessibilidadeImg} alt="Símbolo de acessibilidade" width={40} height={40} />,
+    icon: (
+      <Image
+        src={acessibilidadeImg}
+        alt="Símbolo de acessibilidade"
+        width={40}
+        height={40}
+      />
+    ),
     title: "Pessoa com Deficiência",
     desc: "Promoção de inclusão, acessibilidade e autonomia para pessoas com deficiência.",
   },
@@ -181,8 +188,9 @@ export default function Areas() {
                 Atuação Institucional
               </h3>
               <p className="max-w-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                Registros da atuação da Vice-Presidente e responsável pelo Departamento da Pessoa Idosa
-                em ações de articulação, cuidado e promoção de direitos no território.
+                Registros da atuação da Vice-Presidente e responsável pelo
+                Departamento da Pessoa Idosa em ações de articulação, cuidado e
+                promoção de direitos no território.
               </p>
             </div>
           </FadeIn>
@@ -216,7 +224,9 @@ export default function Areas() {
                             d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 20.25h18M3.75 3h16.5A.75.75 0 0121 3.75v13.5A.75.75 0 0120.25 18H3.75A.75.75 0 013 17.25V3.75A.75.75 0 013.75 3z"
                           />
                         </svg>
-                        <span className="text-xs font-medium tracking-wide">Imagem em breve</span>
+                        <span className="text-xs font-medium tracking-wide">
+                          Imagem em breve
+                        </span>
                       </div>
                     )}
                     <div className="absolute top-3 left-3 w-7 h-7 rounded-full bg-brand-400 text-white text-xs font-black flex items-center justify-center shadow-md">

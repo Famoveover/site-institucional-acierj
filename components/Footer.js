@@ -28,14 +28,9 @@ export default function Footer() {
             <div className="flex gap-2.5 mt-1">
               {[
                 {
-                  href: "https://www.instagram.com/acaborj/",
+                  href: "https://www.instagram.com/acierjcuidadores",
                   label: "Instagram",
                   icon: "📷",
-                },
-                {
-                  href: "https://www.facebook.com/acaborj",
-                  label: "Facebook",
-                  icon: "📘",
                 },
                 {
                   href: "mailto:acierj@gmail.com",
@@ -96,6 +91,7 @@ export default function Footer() {
                 ["/projetos", "Projetos e eventos"],
                 ["/noticias", "Notícias"],
                 ["/areas#direitos-idoso", "Direitos da Pessoa Idosa"],
+                ["/associados", "Área de Associados"],
               ].map(([href, label]) => (
                 <li key={label}>
                   <Link
@@ -116,7 +112,19 @@ export default function Footer() {
             </h4>
             <div className="space-y-4">
               {[
-                { icon: "✉️", title: "Email", text: "acierj@gmail.com" },
+                {
+                  icon: "✉️",
+                  title: "Email",
+                  text: (
+                    <a
+                      href="mailto:acierj@gmail.com"
+                      className="text-white/80 hover:text-white no-underline"
+                      aria-label="Enviar e-mail para ACIERJ"
+                    >
+                      acierj@gmail.com
+                    </a>
+                  ),
+                },
                 { icon: "📞", title: "Telefone", text: "(21) 98236-3474" },
                 {
                   icon: "📍",

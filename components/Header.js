@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "../lib/utils";
@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/projetos", label: "Projetos" },
   { href: "/noticias", label: "Notícias" },
   { href: "/loja", label: "Loja" },
+  { href: "/associados", label: "Associados" },
   { href: "/contato", label: "Contato" },
 ];
 
@@ -63,7 +64,7 @@ export default function Header() {
             "hidden lg:flex items-center gap-1",
             // Mobile overlay
             menuOpen &&
-              "!flex fixed top-16 right-0 w-72 h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 flex-col items-stretch gap-0 py-4 shadow-xl overflow-y-auto transition-transform duration-300 z-50",
+              "!flex fixed top-16 right-0 w-[85vw] max-w-72 h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 flex-col items-stretch gap-0 py-4 shadow-xl overflow-y-auto transition-transform duration-300 z-50",
           )}
           aria-label="Menu principal"
         >
