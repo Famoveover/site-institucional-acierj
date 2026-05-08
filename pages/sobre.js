@@ -136,7 +136,7 @@ export default function Sobre() {
       <PageHero
         crumb="ACIERJ"
         title="Quem Somos"
-        tagline="A Associação representante da categoria dos cuidadores no estado do Rio de Janeiro"
+        tagline="Associação representante da categoria de trabalhadores cuidadores do Estado do Rio de Janeiro"
       />
 
       {/* ═══════════════ Introdução ═══════════════ */}
@@ -330,7 +330,7 @@ export default function Sobre() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Nossos princípios"
-            subtitle="Promover equidade e justiça a categoria dos trabalhadores cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra diversidade."
+            subtitle="Promover equidade e justiça a categoria dos trabalhadores cuidadores, independentemente de raça, gênero, orientação sexual, religião ou qualquer outra ."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {principios.map((item, i) => (

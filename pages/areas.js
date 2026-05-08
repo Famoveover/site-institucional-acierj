@@ -54,7 +54,7 @@ const como = [
   {
     icon: "🤝",
     title: "Diálogo com movimentos",
-    desc: "Articulação com sindicatos, movimentos sociais e entidades para ampliar a luta.",
+    desc: "Articulação com diversos sindicatos, conselhos e movimentos sociais para ampliação da luta.",
   },
   {
     icon: "📜",
@@ -135,7 +135,7 @@ export default function Areas() {
         <div className="max-w-6xl mx-auto px-6">
           <SectionHeader
             title="Como atuamos"
-            subtitle="Nossa atuação baseia-se na mobilização coletiva e no diálogo com movimentos sociais para construir políticas públicas que valorizem o trabalho dos cuidadores"
+            subtitle="Nossa atuação baseia-se na mobilização coletiva e no diálogo com movimentos sociais para para a construção de políticas públicas dos trabalhadores cuidadores"
           />
           <div className="grid sm:grid-cols-3 gap-6 mb-12">
             {como.map((item, i) => (

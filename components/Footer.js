@@ -90,7 +90,6 @@ export default function Footer() {
                 ["/cuidadores", "Ficha de inscrição"],
                 ["/projetos", "Projetos e eventos"],
                 ["/noticias", "Notícias"],
-                ["/areas#direitos-idoso", "Direitos da Pessoa Idosa"],
                 ["/associados", "Área de Associados"],
               ].map(([href, label]) => (
                 <li key={label}>

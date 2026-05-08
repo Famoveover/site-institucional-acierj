@@ -131,7 +131,7 @@ export default function Cuidadores() {
               </p>
               <ul className="space-y-1 text-gray-700 dark:text-gray-300 text-sm mb-8">
                 <li>
-                  <strong>Anuidade:</strong> R$ 120,00
+                  <strong>Anuidade:</strong> R$ 110,00
                 </li>
                 <li>
                   <strong>Chave Pix (CNPJ):</strong> 17.028.461/0001-75
