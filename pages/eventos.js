@@ -6,6 +6,8 @@ import PageHero from "../components/PageHero";
 import SectionHeader from "../components/SectionHeader";
 import FadeIn from "../components/FadeIn";
 
+import evento1Img from "../imagens/evento1.jpeg";
+
 export default function Eventos() {
   return (
     <PageLayout>
@@ -32,20 +34,16 @@ export default function Eventos() {
             >
               <div className="grid md:grid-cols-[1.2fr_1fr] gap-0">
                 {/* Imagem */}
-                <div className="relative aspect-[4/3] md:aspect-auto md:h-auto bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-brand-600 to-brand-500 opacity-40" />
-                  <div className="absolute inset-0 flex items-center justify-center text-white/60 select-none">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-20 h-20"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
+                <div className="relative aspect-[4/3] md:aspect-auto md:h-auto bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden rounded-l-2xl">
+                  <Image
+                    src={evento1Img}
+                    alt="Ana Gilda dos Santos - Palestrante do 2º SUMMIT de Integração de Cuidados de Saúde"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 45vw"
+                    className="w-full h-full object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 pointer-events-none" />
                 </div>
 
                 {/* Conteúdo */}
