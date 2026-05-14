@@ -2,6 +2,7 @@ import PageLayout from "../components/PageLayout";
 import PageHero from "../components/PageHero";
 import FadeIn from "../components/FadeIn";
 import CardParceiro from "../components/CardParceiro";
+import piresQueirozImg from "../imagens/pires-queiroz-martins.jpeg";
 
 export default function Associados() {
   return (
@@ -47,7 +48,7 @@ export default function Associados() {
             {/* Grid de Parceiros */}
             <div className="space-y-8">
               <CardParceiro
-                logo="/images/parceiros/pires-queiroz-martins.png"
+                logo={piresQueirozImg}
                 nome="Pires Queiroz & Martins — Advogados Associados"
                 slogan="Nosso escritório possui longa parceria com a ACIERJ e atua de forma especializada na defesa dos direitos dos cuidadores."
                 descricao="Temos experiência em ações trabalhistas envolvendo cuidadores da pessoa idosa, da saúde mental, escolares e da pessoa com deficiência, tanto no âmbito público quanto privado."

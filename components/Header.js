@@ -4,20 +4,27 @@ import Link from "next/link";
 import { cn } from "../lib/utils";
 import logoImg from "../imagens/acierj.png";
 
+// Links principais (sem Institucional)
 const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/sobre", label: "Sobre" },
-  { href: "/areas", label: "Áreas de Atuação" },
   { href: "/cuidadores", label: "Cuidadores" },
-  { href: "/projetos", label: "Projetos" },
+  { href: "/associados", label: "Associados" },
   { href: "/eventos", label: "Eventos" },
   { href: "/noticias", label: "Notícias" },
   { href: "/contato", label: "Contato" },
 ];
 
+// Links do dropdown "Institucional"
+const institucionalLinks = [
+  { href: "/sobre", label: "Sobre" },
+  { href: "/areas", label: "Áreas de Atuação" },
+  { href: "/projetos", label: "Projetos" },
+];
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -56,7 +63,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Nav desktop */}
+        {/* Nav desktop + mobile */}
         <nav
           className={cn(
             // Desktop
@@ -67,6 +74,7 @@ export default function Header() {
           )}
           aria-label="Menu principal"
         >
+          {/* Links principais */}
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
@@ -83,19 +91,82 @@ export default function Header() {
               {label}
             </Link>
           ))}
-          <Link
-            href="/cuidadores"
-            onClick={closeMenu}
-            className={cn(
-              "inline-block ml-2 px-5 py-2.5 text-sm font-bold text-white no-underline",
-              "bg-brand-400 rounded-md hover:bg-accent hover:no-underline",
-              "transition-all duration-200 hover:-translate-y-0.5",
-              menuOpen && "ml-0 mx-5 mt-4 text-center py-3.5",
-            )}
+
+          {/* Dropdown Institucional */}
+          <div
+            className="relative group"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
           >
-            Associe-se
-          </Link>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className={cn(
+                "text-sm font-medium text-gray-700 dark:text-gray-200 px-3 py-2 rounded-md",
+                "hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-400/10 transition-colors",
+                "flex items-center gap-1",
+                // Mobile
+                menuOpen &&
+                  "text-base py-3.5 px-6 rounded-none border-b border-gray-100 dark:border-gray-700 w-full justify-between",
+              )}
+            >
+              Institucional
+              <svg
+                className={cn(
+                  "w-4 h-4 transition-transform",
+                  (dropdownOpen || !menuOpen) && "rotate-180",
+                )}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </button>
+
+            {/* Dropdown menu */}
+            {(dropdownOpen || menuOpen) && (
+              <div
+                className={cn(
+                  "absolute left-0 mt-0 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden",
+                  // Desktop: posicionado acima
+                  "hidden group-hover:block lg:block",
+                  // Mobile: expandido abaixo
+                  menuOpen && "!flex flex-col w-full bg-transparent shadow-none border-none rounded-none",
+                )}
+              >
+                {institucionalLinks.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={closeMenu}
+                    className={cn(
+                      "block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200",
+                      "hover:bg-brand-50 dark:hover:bg-brand-400/10 hover:text-brand-400 transition-colors",
+                      // Mobile
+                      menuOpen &&
+                        "py-3.5 px-8 border-b border-gray-100 dark:border-gray-700 rounded-none bg-gray-50 dark:bg-gray-700/30",
+                    )}
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
+
+        {/* Botão "Associe-se" - fora do menu */}
+        <Link
+          href="/cuidadores"
+          className={cn(
+            "hidden lg:inline-block px-5 py-2.5 text-sm font-bold text-white no-underline",
+            "bg-brand-500 hover:bg-brand-600 dark:bg-brand-600 dark:hover:bg-brand-700",
+            "rounded-md shadow-md shadow-brand-500/30 hover:shadow-lg hover:shadow-brand-500/40",
+            "transition-all duration-200 hover:-translate-y-0.5",
+          )}
+        >
+          Associe-se
+        </Link>
 
         {/* Hamburger */}
         <button

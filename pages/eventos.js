@@ -7,6 +7,7 @@ import SectionHeader from "../components/SectionHeader";
 import FadeIn from "../components/FadeIn";
 
 import evento1Img from "../imagens/evento1.jpeg";
+import evento2Img from "../imagens/evento2.jpeg";
 
 export default function Eventos() {
   return (
@@ -139,19 +140,13 @@ export default function Eventos() {
               >
                 {/* Imagem */}
                 <div className="relative aspect-video bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden">
-                  {/* Placeholder para imagem - será adicionada quando receber o arquivo */}
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-brand-200 to-brand-100 dark:from-brand-800 dark:to-brand-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-24 h-24 text-brand-400 dark:text-brand-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={1}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
+                  <Image
+                    src={evento2Img}
+                    alt="Semana da Luta Antimanicomial — Política Pública de Verdade"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full object-cover object-center"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
                 </div>
 
