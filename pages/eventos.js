@@ -8,6 +8,7 @@ import FadeIn from "../components/FadeIn";
 
 import evento1Img from "../imagens/evento1.jpeg";
 import evento2Img from "../imagens/evento2.jpeg";
+import plenariaCuidadoresImg from "../public/images/eventos/plenaria-unificada-cuidadores.jpeg";
 
 export default function Eventos() {
   return (
@@ -132,6 +133,107 @@ export default function Eventos() {
           />
 
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Card: Plenária Unificada dos Cuidadores Parentais e Remunerados */}
+            <FadeIn>
+              <motion.article
+                whileHover={{ y: -8 }}
+                className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:border-brand-200 dark:hover:border-brand-400/40 flex flex-col h-full"
+              >
+                {/* Imagem */}
+                <div className="relative aspect-video bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden">
+                  <Image
+                    src={plenariaCuidadoresImg}
+                    alt="Plenária Unificada dos Cuidadores Parentais e Remunerados — A Nossa Luta é Unificada por Direitos"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
+                </div>
+
+                {/* Conteúdo */}
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  <div className="space-y-4 flex-grow">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase mb-3">
+                        Maio 2026
+                      </span>
+                      <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-white mb-2 leading-snug">
+                        Plenária Unificada dos Cuidadores Parentais e Remunerados
+                      </h3>
+                      <p className="text-sm text-brand-600 dark:text-brand-400 font-semibold italic">
+                        "A Nossa Luta é Unificada por Direitos"
+                      </p>
+                    </div>
+
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                      Evento organizado pela ACIERJ com participação de cuidadores parentais, remunerados e representantes de associações de cuidado para debater direitos e políticas públicas.
+                    </p>
+
+                    {/* Programação */}
+                    <div className="mt-4 space-y-3 bg-brand-50 dark:bg-brand-900/20 p-4 rounded-lg text-sm">
+                      <p className="font-bold text-gray-900 dark:text-white">Programação:</p>
+                      
+                      <div className="space-y-2">
+                        <p className="font-semibold text-gray-800 dark:text-gray-100">Mesa 1 — Cuidadores Parentais</p>
+                        <p className="text-gray-700 dark:text-gray-300 text-xs ml-2">Cintia Teixeira, Iolanda Machado, Ana Paula Germano (Med. Lilia Nascimento)</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <p className="font-semibold text-gray-800 dark:text-gray-100">Mesa 2 — Projetos e Associações</p>
+                        <p className="text-gray-700 dark:text-gray-300 text-xs ml-2">Maria Aparecida (APAZ), Rosângela Fernandes (IPUB), Cibele Henriques (Med. Cassia Gouveia)</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <p className="font-semibold text-gray-800 dark:text-gray-100">Mesa 3 — Cuidadores Remunerados</p>
+                        <p className="text-gray-700 dark:text-gray-300 text-xs ml-2">Cuidador Infantil, Tatiana Evangelista, Patricia Galarani (Med. Romulo Gabriel)</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Informações do evento */}
+                  <div className="space-y-3 pt-6 border-t border-gray-200 dark:border-gray-700 mt-6">
+                    <div className="flex gap-3">
+                      <span className="text-brand-600 dark:text-brand-400 text-lg flex-shrink-0">📅</span>
+                      <div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Data e Horário</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">29 de maio de 2026 (quinta) — 9h às 12h</p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <span className="text-brand-600 dark:text-brand-400 text-lg flex-shrink-0">📍</span>
+                      <div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Local</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">Nise da Silveira / Auditório Cetape</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">Rua Ramiro Magalhães, 521 — Engenho de Dentro, RJ</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                    <Link
+                      href="/contato"
+                      className="inline-flex items-center justify-center gap-2 w-full rounded-lg bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 font-bold text-sm md:text-base shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 transition-all duration-200 hover:-translate-y-0.5 no-underline"
+                    >
+                      <span>Mais informações</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </motion.article>
+            </FadeIn>
+
             {/* Card: Semana da Luta Antimanicomial */}
             <FadeIn>
               <motion.article
