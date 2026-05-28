@@ -8,7 +8,7 @@ import FadeIn from "../components/FadeIn";
 
 import evento1Img from "../imagens/evento1.jpeg";
 import evento2Img from "../imagens/evento2.jpeg";
-import plenariaCuidadoresImg from "../public/images/eventos/plenaria-unificada-cuidadores.jpeg";
+import plenariaCuidadoresImg from "../imagens/plenaria-unificada-cuidadores.jpeg";
 
 export default function Eventos() {
   return (
