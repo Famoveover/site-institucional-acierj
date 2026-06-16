@@ -35,11 +35,11 @@ export default function Eventos() {
           <FadeIn>
             <motion.article
               whileHover={{ y: -8 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:border-brand-200 dark:hover:border-brand-400/40"
+              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:border-brand-200 dark:hover:border-brand-400/40 flex"
             >
-              <div className="grid md:grid-cols-[1.2fr_1fr] gap-0">
+              <div className="grid w-full md:grid-cols-[1.2fr_1fr] gap-0">
                 {/* Imagem */}
-                <div className="relative aspect-[4/3] md:aspect-auto md:h-auto bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden rounded-l-2xl">
+                <div className="relative aspect-[4/3] md:aspect-auto bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden rounded-l-2xl">
                   <Image
                     src={plenariaCuidadoresImg}
                     alt="Plenária Unificada dos Cuidadores Parentais e Remunerados — A Nossa Luta é Unificada por Direitos"
@@ -52,65 +52,67 @@ export default function Eventos() {
                 </div>
 
                 {/* Conteúdo */}
-                <div className="p-8 md:p-10 flex flex-col justify-between h-full">
-                  <div className="space-y-5">
-                    <div>
-                      <span className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase mb-3">
-                        Maio 2026
-                      </span>
-                      <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-2 leading-snug">
-                        Plenária Unificada dos Cuidadores Parentais e Remunerados
-                      </h3>
-                      <p className="text-base text-brand-600 dark:text-brand-400 font-semibold italic">
-                        "A Nossa Luta é Unificada por Direitos"
+                <div className="p-8 md:p-10 flex flex-col h-full">
+                  <div className="flex-1">
+                    <div className="space-y-5">
+                      <div>
+                        <span className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase mb-3">
+                          Maio 2026
+                        </span>
+                        <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-2 leading-snug">
+                          Plenária Unificada dos Cuidadores Parentais e Remunerados
+                        </h3>
+                        <p className="text-base text-brand-600 dark:text-brand-400 font-semibold italic">
+                          "A Nossa Luta é Unificada por Direitos"
+                        </p>
+                      </div>
+
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        Evento organizado pela ACIERJ com participação de cuidadores parentais, remunerados e representantes de associações de cuidado para debater direitos e políticas públicas.
                       </p>
                     </div>
 
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Evento organizado pela ACIERJ com participação de cuidadores parentais, remunerados e representantes de associações de cuidado para debater direitos e políticas públicas.
-                    </p>
+                    {/* Informações do evento */}
+                    <div className="space-y-4 pt-6 border-t border-gray-200 dark:border-gray-700 mt-6">
+                      <div className="flex gap-3">
+                        <span className="text-brand-600 dark:text-brand-400 text-xl flex-shrink-0">📅</span>
+                        <div>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">Data e Horário</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">29 de maio de 2026 (quinta) — 9h às 12h</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-3">
+                        <span className="text-brand-600 dark:text-brand-400 text-xl flex-shrink-0">📍</span>
+                        <div>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">Local</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">Nise da Silveira / Auditório Cetape</p>
+                          <p className="text-sm text-gray-600 dark:text-gray-400">Rua Ramiro Magalhães, 521 — Engenho de Dentro, RJ</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Informações do evento */}
-                  <div className="space-y-4 pt-6 border-t border-gray-200 dark:border-gray-700">
-                    <div className="flex gap-3">
-                      <span className="text-brand-600 dark:text-brand-400 text-xl flex-shrink-0">📅</span>
-                      <div>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Data e Horário</p>
-                        <p className="font-semibold text-gray-900 dark:text-white">29 de maio de 2026 (quinta) — 9h às 12h</p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-3">
-                      <span className="text-brand-600 dark:text-brand-400 text-xl flex-shrink-0">📍</span>
-                      <div>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Local</p>
-                        <p className="font-semibold text-gray-900 dark:text-white">Nise da Silveira / Auditório Cetape</p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Rua Ramiro Magalhães, 521 — Engenho de Dentro, RJ</p>
-                      </div>
-                    </div>
+                  {/* CTA Button */}
+                  <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                    <Link
+                      href="/contato"
+                      className="inline-flex items-center justify-center gap-2 w-full rounded-lg bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 font-bold text-base shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 transition-all duration-200 hover:-translate-y-0.5 no-underline"
+                    >
+                      <span>Mais informações</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="px-8 md:px-10 pb-8 md:pb-10 pt-0 md:pt-0 border-t border-gray-100 dark:border-gray-700 bg-gradient-to-r from-brand-50 to-brand-50/50 dark:from-gray-800/50 dark:to-gray-900/50">
-                <Link
-                  href="/contato"
-                  className="inline-flex items-center justify-center gap-2 w-full md:w-auto rounded-lg bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 font-bold text-base shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 transition-all duration-200 hover:-translate-y-0.5 no-underline"
-                >
-                  <span>Mais informações</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
               </div>
             </motion.article>
           </FadeIn>
