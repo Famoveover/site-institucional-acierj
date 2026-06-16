@@ -11,6 +11,7 @@ import evento2Img from "../imagens/evento2.jpeg";
 import plenariaCuidadoresImg from "../imagens/plenaria-unificada-cuidadores.jpeg";
 import cuidadoIntoleranciaImg from "../imagens/cuidado-intolerancia-religiosa.jpeg";
 import comiteCuidadoImg from "../imagens/comite-cuidado-2.jpeg";
+import congressoAbrasmeImg from "../imagens/congresso-abrasme.jpeg";
 
 export default function Eventos() {
   return (
@@ -478,6 +479,107 @@ export default function Eventos() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </a>
+                  </div>
+                </div>
+              </motion.article>
+            </FadeIn>
+
+            {/* Card: ACIERJ no 10º Congresso Brasileiro de Saúde Mental — ABRASME */}
+            <FadeIn>
+              <motion.article
+                whileHover={{ y: -8 }}
+                className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:border-brand-200 dark:hover:border-brand-400/40 flex flex-col h-full"
+              >
+                {/* Imagem */}
+                <div className="relative aspect-video bg-gradient-to-br from-brand-100 to-brand-50 dark:from-brand-900/30 dark:to-brand-800/20 overflow-hidden">
+                  <Image
+                    src={congressoAbrasmeImg}
+                    alt="ACIERJ no 10º Congresso Brasileiro de Saúde Mental — ABRASME"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
+                </div>
+
+                {/* Conteúdo */}
+                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                  <div className="space-y-4 flex-grow">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-bold rounded-full tracking-wider uppercase mb-3">
+                        Junho 2026
+                      </span>
+                      <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-white mb-3 leading-snug">
+                        ACIERJ no 10º Congresso Brasileiro de Saúde Mental — ABRASME
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                      Nos dias 4, 5 e 6 de junho, a ACIERJ marcou presença no 10º Congresso Brasileiro de Saúde Mental (ABRASME), em Vitória/ES, apresentando artigos sobre a ACIERJ como movimento social e político na luta por políticas públicas de cuidado.
+                    </p>
+
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                      O evento também celebrou um marco histórico: a apresentação da 1ª Formação para Cuidadores da Saúde Mental no Rio de Janeiro, realizada em parceria com a Escola Politécnica de Saúde Joaquim Venâncio — Fiocruz.
+                    </p>
+
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                      Seguimos com o compromisso e protagonismo das trabalhadoras cuidadoras na construção de um cuidado ético, humanizado e politicamente engajado.
+                    </p>
+                  </div>
+
+                  {/* Informações do evento */}
+                  <div className="space-y-3 pt-6 border-t border-gray-200 dark:border-gray-700 mt-6">
+                    <div className="flex gap-3">
+                      <span className="text-brand-600 dark:text-brand-400 text-lg flex-shrink-0">📅</span>
+                      <div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Data</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">4, 5 e 6 de junho de 2026</p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <span className="text-brand-600 dark:text-brand-400 text-lg flex-shrink-0">📍</span>
+                      <div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Local</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">Vitória, Espírito Santo</p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <span className="text-brand-600 dark:text-brand-400 text-lg flex-shrink-0">📍</span>
+                      <div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Formato</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">Participação institucional / Presencial</p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <span className="text-brand-600 dark:text-brand-400 text-lg flex-shrink-0">🏢</span>
+                      <div>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Organização</p>
+                        <p className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">ACIERJ</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                    <Link
+                      href="/contato"
+                      className="inline-flex items-center justify-center gap-2 w-full rounded-lg bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 font-bold text-sm md:text-base shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 transition-all duration-200 hover:-translate-y-0.5 no-underline"
+                    >
+                      <span>Mais informações</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </motion.article>
